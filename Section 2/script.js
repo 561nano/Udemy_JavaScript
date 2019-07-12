@@ -282,3 +282,26 @@ John and Mike both play basketball in different teams. In the latest 3 games, Jo
 GOOD LUCK 😀
 */
 
+var johnAvgScore = (89+120+103)/3, mikeAvgScore = (116+94+123)/3, maryAvgScore = (97+134+105)/3, equalAvgScore = 112;
+var tieScore = false;
+
+console.log(johnAvgScore, mikeAvgScore, maryAvgScore, equalAvgScore);
+
+// This logic would of have been better with an array or table, since i do not know yet how to do that; Lets revisit this later.
+//ToDo "This needs to be recoded without if's and with a table/array"
+
+if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore && johnAvgScore > equalAvgScore) {
+  console.log('John wins with ' + johnAvgScore);
+} else if (mikeAvgScore > johnAvgScore && mikeAvgScore > maryAvgScore && mikeAvgScore > equalAvgScore) {
+  console.log('Mike wins with ' + mikeAvgScore);
+} else if (maryAvgScore > johnAvgScore && maryAvgScore > mikeAvgScore && maryAvgScore > equalAvgScore) {
+  console.log('Mary wins with ' + maryAvgScore);
+} else if (equalAvgScore > johnAvgScore && equalAvgScore > mikeAvgScore && equalAvgScore > maryAvgScore) {
+  console.log('Christian wins with ' + equalAvgScore);
+} else {
+  console.log("There is a Tie, let see who tied");
+  tieScore = true;
+}
+
+
+//create a algorithm to see who is tied
