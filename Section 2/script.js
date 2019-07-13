@@ -48,7 +48,7 @@ console.log(firstName + ' last name is ' + lastName);
 *************************************************************************
 */
 
-/* 
+/******************************************************************** 
 
 //Basic Operators
 
@@ -72,11 +72,11 @@ x--; //x = x - 1
 console.log(x);
 */
 
-/*****************************
+/**********************************************************************
 * CODING CHALLENGE 1
 */
 
-/*
+/***********************************************************************
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
 
 1. Store Mark's and John's mass and height in variables
@@ -87,7 +87,7 @@ Mark and John are trying to compare their BMI (Body Mass Index), which is calcul
 GOOD LUCK 😀
 */
 
-/*
+/*********************************************************************
 var johnHeight= 1.95, johnMass =92, johnBMI; 
 var markHeight = 1.69, markMass = 78, marksBMI;
 
@@ -104,7 +104,7 @@ var isJohnGreater = johnBMI > marksBMI;
 console.log('Is John\'s BMI higher than Mark\'s? ' + isJohnGreater);
 */
 
-/*
+/**************************************************************************
 
 //If and else statements
 
@@ -127,7 +127,7 @@ if (isMarried){ //(isMarried === true)
 */
 
 /*
-*******************************************************
+**************************************************************************
 
 // revisting coding challenge number 1
 
@@ -156,7 +156,7 @@ if (isJohnGreater){
 ***********************************************************
 */
 
-/*
+/****************************************************************************
 
 // Boolean logic
 
@@ -179,7 +179,7 @@ if(age <= 12){
 
 */ 
 
-/*
+/***************************************************************************
 // The Ternary Operator
 
 
@@ -242,8 +242,7 @@ switch(true){
 
 */
 
-/* 
-*******************************************************************
+/********************************************************************
 Truthy & Falsy value and equality operators
 
 // falsy values: undefined, null, 0, '', "", NaN
@@ -267,7 +266,7 @@ if (height == '23') {
 }
 */
 
-/*****************************
+/********************************************************************************
 * CODING CHALLENGE 2
 
 John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
@@ -282,13 +281,14 @@ John and Mike both play basketball in different teams. In the latest 3 games, Jo
 GOOD LUCK 😀
 */
 
+/*
 var johnAvgScore = (89+120+103)/3, mikeAvgScore = (116+94+123)/3, maryAvgScore = (97+134+105)/3, chrisAvgScore = 112;
 var tieScore = false;
 
 console.log(johnAvgScore, mikeAvgScore, maryAvgScore, chrisAvgScore);
 
 // This logic would of have been better with an array or table, since i do not know yet how to do that; Lets revisit this later.
-//ToDo "This needs to be recoded without if's and with a table/array"
+//TODO "This needs to be recoded without if's and with a table/array"
 
 if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore && johnAvgScore > chrisAvgScore) {
   console.log('John wins with ' + johnAvgScore);
@@ -299,9 +299,91 @@ if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore && johnAvgScore >
 } else if (chrisAvgScore > johnAvgScore && chrisAvgScore > mikeAvgScore && chrisAvgScore > maryAvgScore) {
   console.log('Chris wins with ' + equalAvgScore);
 } else {
-  console.log("There is a Tie, let see who tied");
+  console.log("There is a Tie");
   tieScore = true;
 }
 
+// TODO add logic for tie
+*/
 
-//create a algorithm to see who is tied
+/**********************************************************************
+// Functions
+*/
+
+/*
+
+var currentYear = new Date().getFullYear()
+
+function calculateAge(birthYear) { // birthYear is locked into the Function
+    return currentYear - birthYear
+} 
+var ageJohn = calculateAge(1990), ageMike = calculateAge(1948), ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
+
+
+function yearUntilRetirement(birthYear, firstName) {
+    var age = calculateAge(birthYear);
+    var retirement = 65 - age;
+    
+    if (retirement > 0){
+        console.log(firstName + ' is ' + age + ', and will retires in ' + retirement + ' years.');    
+    } else {
+        console.log(firstName + 'is ' + age + ', at retirement age.')
+    }
+    
+}
+
+yearUntilRetirement(1990, 'John');
+yearUntilRetirement(1948, 'Mike');
+yearUntilRetirement(1969, 'Jane');
+*/
+
+/********************************************************************************
+// Function Statements and Expressions
+*/
+
+/*
+// Function declaration
+//function whatDoYouDo(job, firstName) {}
+
+// Function expression
+var whatDoYouDo = function(job, firsName) {
+    switch(job) {
+        case 'teacher':
+            return firsName + ' teaches kids how to code.';
+        case 'driver':
+            return firsName + ' drives a cab in Lisbon.'
+        case 'designer':
+            return firsName + ' designs beautiful wesites.'
+        default:
+            return firsName + ' does something else.'
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'))
+console.log(whatDoYouDo('designer', 'Jane'))
+console.log(whatDoYouDo('retired', 'Mark'))
+
+//Expresions return a result
+//Statement does not return immediate results
+*/
+
+/********************************************************************************
+// Arrays
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
