@@ -368,9 +368,175 @@ console.log(whatDoYouDo('retired', 'Mark'))
 //Statement does not return immediate results
 */
 
-/********************************************************************************
+/**************************************************************************
 // Arrays
 */
+
+/*
+var names = ['John', 'Mike', 'Jane'];
+var years = new Array(1990, 1969,1948);
+
+// Array output
+console.log(names); //list whole array
+console.log(names[2]); //gets position 3
+console.log(names.length); //count of array
+
+// Mutated array data
+names[1] = 'Ben'; //changes position 2 to Ben
+console.log(names);
+
+names[5] = 'Mary'; // adds 2 empty lots to the array and at possition 6 added Mary
+console.log(names);
+
+names[names.length-2] = 'Chris'; // added to position 5
+console.log(names);
+
+
+// Different data types
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('blue'); //apends to the end of the array
+john.unshift('Mr.'); //addes to the begining of the array
+
+console.log(john);
+
+john.pop(); //removes the last item of an array
+john.shift(); //removes the first item of an array
+
+console.log(john);
+console.log(john.indexOf(1990)); //returns the position in the array
+console.log(john.indexOf(20)); // return -1 since it is not in the array
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+
+console.log(isDesigner);
+*/
+
+/*****************************
+* CODING CHALLENGE 3 *
+*/
+
+/*
+John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+
+In the end, John would like to have 2 arrays:
+1) Containing all three tips (one for each bill)
+2) Containing all three final paid amounts (bill + tip).
+
+(NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+
+GOOD LUCK 😀
+*/
+
+/*
+var noTips = [124,48,268];
+var withTip = [];
+var TipOnly = [];
+
+function tipCalculator(x){
+    if (x < 50) {
+        TipOnly.push(x * .2)
+        withTip.push(x + (x*.2))
+    } else if (x >= 50 && x <=200) {
+        TipOnly.push(x * .15)
+        withTip.push(x + (x*.15))
+    } else {
+        TipOnly.push(x * .1)
+        withTip.push(x + (x*.1))
+    }
+}
+
+tipCalculator(noTips[0]);
+tipCalculator(noTips[1]);
+tipCalculator(noTips[2]);
+
+console.log(TipOnly);
+console.log(withTip);
+
+//TODO return after learning loops
+*/
+
+/*************************************************************
+// Objects and Properties (Lecture 25)
+*/
+
+/*
+// Object literal
+var john = {
+    firstName: 'John', //firstname = Key, John = Item
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john); 
+
+//to find an item in an Object is to use .itemKey
+console.log(john.firstName);
+
+// or ['itemKey']
+console.log(john['lastName']);
+
+//or delcare a variable (Same as above)
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+
+console.log(john)
+
+// new Object syntax
+var jane = new Object();
+jane.name = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
+*/
+
+/************************************************************
+// Objects and methods (Lecture 26)
+*/
+
+/*
+var john = {
+    firstName: 'John', //firstname = Key, John = Item
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+    currentYear: new Date().getFullYear(),
+    calcAge: function() {
+        this.age = this.currentYear - this.birthYear;
+    }
+};
+
+john.calcAge();
+console.log(john);
+console.log(john.age);
+*/
+
+/*****************************
+* CODING CHALLENGE 4
+*/
+
+/*
+Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
+1. For each of them, create an object with properties for their full name, mass, and height
+2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
+3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
+
+Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+
+GOOD LUCK 😀
+*/
+
 
 
 
