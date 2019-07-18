@@ -8,17 +8,17 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
 - [x] Section 02: JavaScript Language Basics
 - [x] Section 03: How JavaScript works behind the scenes.
 - [ ] Section 04: JavaScript in the Browser: DOM Manipulation and Events
-    - The DOM and DOM Manipulation
-    - 5-Minute HTML and CSS Crash Course
-    - Project Setup and Details 
-    - First DOM Access and Manipulation
-    - Events and Event Handling: Rolling the Dice
-    - Updating Scores and Changing the Active Player
-    - Implementing Our 'Hold' Function and the DRY Principle
-    - Creating a Game Initialization Function
-    - Finishing Touches: State Variables 
-    - Coding Challenge 6
-    - Coding Challenge 6: Solution - Part 1, 2 & 3
+    - [x] The DOM and DOM Manipulation
+    - [x] 5-Minute HTML and CSS Crash Course
+    - [x] Project Setup and Details 
+    - [x] First DOM Access and Manipulation
+    - [x] Events and Event Handling: Rolling the Dice
+    - [ ] Updating Scores and Changing the Active Player
+    - [ ] Implementing Our 'Hold' Function and the DRY Principle
+    - [ ] Creating a Game Initialization Function
+    - [ ] Finishing Touches: State Variables 
+    - [ ] Coding Challenge 6
+    - [ ] Coding Challenge 6: Solution - Part 1, 2 & 3
 - [ ] Section 05: Advanced JavaScript: Objects and Functions
 - [ ] Section 06: Putting It All Together: The Budget App Project
 - [ ] Section 07: Next Generation JavaScript: Intro to ES6 / ES2015
