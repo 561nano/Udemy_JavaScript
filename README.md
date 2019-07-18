@@ -1,6 +1,6 @@
 # Udemy JavaScript Course
 
-This repositoy follow [The Complete JavaScript Course](https://www.udemy.com/the-complete-javascript-course/) on Udemy, [Jonas Schmedtmann](https://www.udemy.com/user/jonasschmedtmann/) is the instructor of the class. He takes you in depth of JavaScript language, the theory, application of JavaScript; While you are learning you are building real applications with JavaScript.
+This repository follow [The Complete JavaScript Course](https://www.udemy.com/the-complete-javascript-course/) on Udemy, [Jonas Schmedtmann](https://www.udemy.com/user/jonasschmedtmann/) is the instructor of the class. He takes you in depth of JavaScript language, the theory, application of JavaScript; While you are learning you are building real applications with JavaScript.
 
 ## Sections and Lectures
 
@@ -12,7 +12,7 @@ This repositoy follow [The Complete JavaScript Course](https://www.udemy.com/the
     -[x] 5-Minute HTML and CSS Crash Course
     -[x] Project Setup and Details 
     -[x] First DOM Access and Manipulation
-    -[ ] Events and Event Handling: Rolling the Dice
+    -[x] Events and Event Handling: Rolling the Dice
     -[ ] Updating Scores and Changing the Active Player
     -[ ] Implementing Our 'Hold' Function and the DRY Principle
     -[ ] Creating a Game Initialization Function
