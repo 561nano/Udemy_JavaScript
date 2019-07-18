@@ -26,6 +26,8 @@ document.querySelector('#current-' + activePlayer).textContent = dice; //(Setter
 // . = class
 document.querySelector('.dice').style.display = 'none'; //hides class = dice
 
+console.log('test');
+
 
 
 
