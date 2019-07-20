@@ -36,7 +36,9 @@ document.querySelector('.btn-roll').addEventListener('click', function () { //'c
 
 
     // 3. Update the round score IF the rolled # is NOT a #1
-
+    
+    
+    
 });
 
 
