@@ -1,7 +1,7 @@
 body {
     color: white;
     margin: 20px 40px;
-    background: linear-gradient(to bottom, #82d78b, #4ca2cd);
+    background: linear-gradient(to bottom, #82d78b, #51acda);
 }
 
 .head_p {
@@ -34,7 +34,7 @@ dt {
     box-shadow: 0 30px 80px 10px rgba(0, 0, 0, .2);
     font-size: 20px;
     font-weight: 100;
-    background-color: #80d790;
+    background-color: #79d089;
     border-radius: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
