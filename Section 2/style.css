@@ -1,21 +1,26 @@
 body {
     color: white;
     margin: 20px 40px;
-    background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+    background: linear-gradient(to bottom, #82d78b, #4ca2cd);
+}
+
+.head_p {
+    font-size: 20px;
 }
 
 dt {
     font-size: 20px;
-    color: #222222;
     padding-left: 10px;
-    background-color: white;
+    background: #50b3df;
     border-radius: 100px;
     display: flex;
     justify-content: center;
+    box-shadow: 0 30px 80px 10px rgba(0, 0, 0, .2);
 }
 
 .info_box {
-    background-color: #da5455;
+    background-color: #3D7D94;
+    box-shadow: 0 30px 80px 10px rgba(0, 0, 0, .2);
     border-radius: 15px;
     font-size: 25px;
     margin-top: 5px;
@@ -26,9 +31,10 @@ dt {
 }
 
 .challenge_text {
+    box-shadow: 0 30px 80px 10px rgba(0, 0, 0, .2);
     font-size: 20px;
     font-weight: 100;
-    background-color: #3cc750;
+    background-color: #80d790;
     border-radius: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
