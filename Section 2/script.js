@@ -2,7 +2,7 @@
 Section 2 notes:
 */
 
-/*****************************************************************
+/* ****************************************************************
  //Variable and data types
 
  console.log('Hello Again!');
@@ -23,9 +23,9 @@ Section 2 notes:
  console.log(age);
  console.log(fullAge);
  console.log(job);
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  //Variable mutation & type coercion
 
  var firstName = 'John';
@@ -45,9 +45,9 @@ Section 2 notes:
 
  var lastName = prompt('What is his last name');
  console.log(firstName + ' last name is ' + lastName);
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  //Basic Operators
 
  var n = new Date().getFullYear();
@@ -68,9 +68,9 @@ Section 2 notes:
  console.log(x);
  x--; //x = x - 1
  console.log(x);
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 1 ***
 
  Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
@@ -81,9 +81,9 @@ Section 2 notes:
  4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true").
 
  GOOD LUCK 😀
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 1 Code ***
  var johnHeight= 1.95, johnMass =92, johnBMI;
  var markHeight = 1.69, markMass = 78, marksBMI;
@@ -99,9 +99,9 @@ Section 2 notes:
  var isJohnGreater = johnBMI > marksBMI;
 
  console.log('Is John\'s BMI higher than Mark\'s? ' + isJohnGreater);
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  //If and else statements
 
  var firstName = 'John';
@@ -120,9 +120,9 @@ Section 2 notes:
 	console.log(firstName + ' will hopefully marry soon :)');
 }
 
- *****************************************************************/
+ **************************************************************** */
 
-/******************************************************************
+/* *****************************************************************
  // resisting coding challenge number 1
 
  var johnHeight= 1.95, johnMass =92, johnBMI;
@@ -144,14 +144,14 @@ Section 2 notes:
 } else {
 	console.log("Mark has a greater BMI");
 }
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Boolean logic
 
  // and = &&
  // or = ||
- // not = !(varaiable < logical question)
+ // not = !(variable < logical question)
 
  var firstName = 'John';
  var age = 30
@@ -165,9 +165,9 @@ Section 2 notes:
 } else {
 	console.log(firstName + ' is a man');
 }
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // The Ternary Operator
 
  var firstName = 'John', age = 16;
@@ -190,9 +190,9 @@ Section 2 notes:
 } else {
 	console.log('no beer');
 }
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Switch Statements
 
  var job = 'instructor';
@@ -202,7 +202,7 @@ Section 2 notes:
         console.log(firstName + ' teaches kids how to code.');
         break;
     case 'driver':
-        console.log(firstName + ' drives an uber in Libsbon.');
+        console.log(firstName + ' drives an uber in Lisbon.');
         break;
     case 'designer':
         console.log(firstName + ' designs beautiful websites.');
@@ -211,7 +211,7 @@ Section 2 notes:
         console.log(firstName + ' does something else.');
 }
 
- // Replace if for Switch statement (uses the early if statment for age verification)
+ // Replace if for Switch statement (uses the early if statement for age verification)
 
  var firstName = 'John', age = 22;
 
@@ -228,9 +228,9 @@ Section 2 notes:
     default:
         console.log(firstName + ' is a man');
 }
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  Truthy & Falsy value and equality operators
 
  // falsy values: undefined, null, 0, '', "", NaN
@@ -252,9 +252,9 @@ Section 2 notes:
  if (height == '23') {
     console.log('The == operator does type coercion');
 }
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 2 ****
 
  John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
@@ -267,9 +267,9 @@ Section 2 notes:
  5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
 
  GOOD LUCK 😀
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 2 code ****
  var johnAvgScore = (89+120+103)/3, mikeAvgScore = (116+94+123)/3, maryAvgScore = (97+134+105)/3, chrisAvgScore = 112;
  var tieScore = false;
@@ -293,9 +293,9 @@ Section 2 notes:
 }
 
  // TODO add logic for tie
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Functions
 
  var currentYear = new Date().getFullYear()
@@ -322,9 +322,9 @@ Section 2 notes:
  yearUntilRetirement(1990, 'John');
  yearUntilRetirement(1948, 'Mike');
  yearUntilRetirement(1969, 'Jane');
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Function Statements and Expressions
 
  // Function declaration
@@ -338,7 +338,7 @@ Section 2 notes:
         case 'driver':
             return firsName + ' drives a cab in Lisbon.'
         case 'designer':
-            return firsName + ' designs beautiful wesites.'
+            return firsName + ' designs beautiful websites.'
         default:
             return firsName + ' does something else.'
     }
@@ -348,11 +348,11 @@ Section 2 notes:
  console.log(whatDoYouDo('designer', 'Jane'))
  console.log(whatDoYouDo('retired', 'Mark'))
 
- //Expresions return a result
+ //Expressions return a result
  //Statement does not return immediate results
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Arrays
 
  var names = ['John', 'Mike', 'Jane'];
@@ -367,7 +367,7 @@ Section 2 notes:
  names[1] = 'Ben'; //changes position 2 to Ben
  console.log(names);
 
- names[5] = 'Mary'; // adds 2 empty lots to the array and at possition 6 added Mary
+ names[5] = 'Mary'; // adds 2 empty lots to the array and at position 6 added Mary
  console.log(names);
 
  names[names.length-2] = 'Chris'; // added to position 5
@@ -378,8 +378,8 @@ Section 2 notes:
 
  var john = ['John', 'Smith', 1990, 'designer', false];
 
- john.push('blue'); //apends to the end of the array
- john.unshift('Mr.'); //addes to the begining of the array
+ john.push('blue'); //appends to the end of the array
+ john.unshift('Mr.'); //added to the beginning of the array
 
  console.log(john);
 
@@ -393,9 +393,9 @@ Section 2 notes:
  var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
 
  console.log(isDesigner);
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 3 ***
 
  John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
@@ -409,9 +409,9 @@ Section 2 notes:
  (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
 
  GOOD LUCK 😀
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 3 code ***
  var noTips = [124,48,268];
  var withTip = [];
@@ -438,14 +438,14 @@ Section 2 notes:
  console.log(withTip);
 
  //TODO return after learning loops
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Objects and Properties (Lecture 25)
 
  // Object literal
  var john = {
-    firstName: 'John', //firstname = Key, John = Item
+    firstName: 'John', //firstName = Key, John = Item
     lastName: 'Smith',
     birthYear: 1990,
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
@@ -461,7 +461,7 @@ Section 2 notes:
  // or ['itemKey']
  console.log(john['lastName']);
 
- //or delcare a variable (Same as above)
+ //or declare a variable (Same as above)
  var x = 'birthYear';
  console.log(john[x]);
 
@@ -476,13 +476,13 @@ Section 2 notes:
  jane.birthYear = 1969;
  jane['lastName'] = 'Smith';
  console.log(jane);
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Objects and methods (Lecture 26)
 
  var john = {
-    firstName: 'John', //firstname = Key, John = Item
+    firstName: 'John', //firstName = Key, John = Item
     lastName: 'Smith',
     birthYear: 1990,
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
@@ -497,9 +497,9 @@ Section 2 notes:
  john.calcAge();
  console.log(john);
  console.log(john.age);
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 4 ***
 
  Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
@@ -510,9 +510,9 @@ Section 2 notes:
  Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
 
  GOOD LUCK 😀
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 4 code ***
  var john = {
 	name: 'John Smith',
@@ -546,12 +546,12 @@ Section 2 notes:
 	console.log(mike.name + " & " + john.name + ", have the same BMI");
 }
 
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // Loops and iteration
 
- for (var i = 0; i < 10; i++){ // (variable, rule, couter method)
+ for (var i = 0; i < 10; i++){ // (variable, rule, counter method)
 	console.log(i); // Loop iteration
 }
 
@@ -567,12 +567,12 @@ Section 2 notes:
 	console.log(john[i]);
 	i++;
 }
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  // continue and break statements
 
- // continue = moveforward with the loop
+ // continue = moveForward with the loop
  var john = ['John', 'Smith', 1990, 'designer',false];
  for (var i = 0; i < john.length; i++){
 	if (typeof john[i] !== 'string') continue; //since it is a simple statement {} is not needed
@@ -591,9 +591,9 @@ Section 2 notes:
  for (var i = john.length - 1; i >=0; i—-){
 	console.log(john[i]);
 }
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 5 ***
 
  Remember the tip calculator challenge? Let's create a more advanced version using everything we learned!
@@ -617,9 +617,9 @@ Section 2 notes:
  8. Log to the console which family paid the highest tips on average
 
  GOOD LUCK 😀
- *****************************************************************/
+ **************************************************************** */
 
-/*****************************************************************
+/* ****************************************************************
  *** CODING CHALLENGE 5 ***
  //this is the object for john
  var john = {
@@ -694,4 +694,4 @@ Section 2 notes:
 } else {
     console.log("Mark paid on avg more tips than John")
 }
- *****************************************************************/
+ **************************************************************** */

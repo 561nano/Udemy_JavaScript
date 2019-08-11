@@ -4,124 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <title>Section 2: JavaScript Language Basics</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<style>
-    body {
-        color: white;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-</style>
+<body>
+<h1>Section 2: JavaScript Language Basics</h1>
+<p>Section 2 notes from Christian S.</p>
 
-<body style="background-color: #3C4043;">
-    <h1>Section 2: JavaScript Language Basics</h1>
-
-    <p>Section 2 notes from Christian S.</p>
-
-    <dl>
-        <b>
-            <dt style="font-size: 20px">Escape Sequences in Strings</dt>
-        </b>
+<dl>
+    <dt><b>Escape Sequences in Strings</b></dt>
+    <div class="info_box">
         <dd>\' = Single quote</dd>
         <dd>\" = Double quote</dd>
-        <dd>\\ = Blackslash</dd>
+        <dd>\\ = Backslash</dd>
         <dd>\n = Newline</dd>
         <dd>\r = Carriage return</dd>
         <dd>\t = Tab</dd>
         <dd>\b = Backspace</dd>
         <dd>\f = Form feed</dd>
-        <dd>⠀</dd>
+    </div>
 
-        <b>
-            <dt style="font-size: 20px">Variable and data types</dt>
-        </b>
+
+    <dt><b>Variable and data types</b></dt>
+    <div class="info_box">
         <dd>- Strings: "Text"</dd>
-        <dd>- Numbers (as floatpoint): 1 or 1.5</dd>
+        <dd>- Numbers (as float point): 1 or 1.5</dd>
         <dd>- Boolean: True or False</dd>
-        <dd><span style="color: red; ">- Objects and Symbols: RETURN LATER, HAVENT LEARN YET</span></dd>
-        <dd>- Undefined: This is a return when a variable is "empty" and when it has not been assigned to one of the characteristic as above.</dd>
-        <dd>⠀</dd>
-
-        <b>
-            <dt style="font-size: 20px">Variable mutation & data types coercion</dt>
-        </b>
-        <dd>- Takeing variable types and using them together with + in console.log(variable + ' string message')</dd>
-        <dd>⠀</dd>
-
-        <b>
-            <dt style="font-size: 20px">Basic Operators</dt>
-        </b>
-        <dd>x = x * 2 -----> x *= 2</dd>
-        <dd>x = x + 2 -----> x += 2</dd>
-        <dd>x = x + 1 -----> x++</dd>
-        <dd>x = x - 1 -----> x--</dd>
-        <dd>⠀</dd>
+        <!--TODO add objects and symbols info-->
+        <dd>- Objects and Symbols: UNKNOWN</dd>
+        <dd>- Undefined: This is a return when a variable is "empty" and when it has not been assigned to one of the
+            characteristic as above.
+        </dd>
+    </div>
 
 
-        <b>
-            <dt style="font-size: 20px">Coding Challenge #1</dt>
-        </b>
-        <dd>⠀</dd>
+    <dt><b>Variable mutation & data types coercion</b></dt>
+    <div class="info_box">
+        <dd>Taking variable types and using them together with + in console.log<br>(variable + ' string message')</dd>
+    </div>
+
+
+    <dt><b>Basic Operators</b></dt>
+    <div class="info_box">
+        <dd>x = x * 2 || x *= 2</dd>
+        <dd>x = x + 2 || x += 2</dd>
+        <dd>x = x + 1 || x++</dd>
+        <dd>x = x - 1 || x--</dd>
+    </div>
+
+
+    <dt><b>Coding Challenge #1</b></dt>
+
+    <div class="challenge_text">
         <dd>Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the below formulas.</dd>
+        <dd><br>Formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).</dd>
 
-        <dd>Formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).</dd>
+            <p>1. Store Mark's and John's mass and height in variables.
+            <br>2. Calculate both their BMIs.
+            <br>3. Create a boolean variable containing information about whether Mark has a higher BMI than John.
+            <br>4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher
+            than
+            John's? true").
+    </div>
 
-        <dd>⠀</dd>
-        <dd>1. Store Mark's and John's mass and height in variables.</dd>
-        <dd>2. Calculate both their BMIs.</dd>
-        <dd>3. Create a boolean variable containing information about whether Mark has a higher BMI than John. </dd>
-        <dd>4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true").</dd>
-        <dd>⠀</dd>
-        <dd>code line: 91 - 104</dd>
-        <dd>⠀</dd>
 
-        <b>
-            <dt style="font-size: 20px">If and else statement</dt>
-        </b>
+    <dt><b>If and else statement</b></dt>
+    <div class="info_box">
+        <!--TODO fix code lines-->
         <dd>code line: 109 - 125</dd>
-        <dd>⠀</dd>
+    </div>
 
-        <b>
-            <dt style="font-size: 20px">Revisting coding challenge #1</dt>
-        </b>
+
+    <dt><b>Revising coding challenge #1</b></dt>
+    <div class="info_box">
+        <!--TODO fix code lines-->
         <dd>code line: 129 - 157</dd>
-        <dd>⠀</dd>
+    </div>
 
-        <b>
-            <dt style="font-size: 20px">Boolean Logic</dt>
-        </b>
-        <dd>- and = && </dd>
-        <dd>- or = || </dd>
-        <dd>- not = !(varaiable < logical question)</dd> <dd>code line: 159 - 180</dd>
-        <dd>⠀</dd>
 
-        <b>
-            <dt style="font-size: 20px">Ternary Operator</dt>
-        </b>
+    <dt><b>Boolean Logic</b></dt>
+    <div class="info_box">
+        <dd>- and = &&</dd>
+        <dd>- or = ||</dd>
+        <dd>- not = !(variable < logical question)</dd>
+        <!--TODO fix code lines-->
+        <dd>code line: 159 - 180</dd>
+    </div>
+
+    <dt><b>Ternary Operator</b></dt>
+    <div class="info_box">
+        <!--TODO fix code lines-->
         <dd>code line: 182 - 243</dd>
-        <dd style="font-size: 50px"><span style="color: red; ">YOU LEFT OFF HERE</span></dd>
-        <dd>⠀</dd>
-
-        <b>
-            <dt style="font-size: 20px">c</dt>
-        </b>
-        <dd></dd>
-        <dd>⠀</dd>
-    </dl>
-
-    <!-- <p id="demo"></p> -->
+    </div>
+</dl>
 </body>
 
-
+<!-- Source of Javascript file -->
 <script src="script.js"></script>
-<!-- <script>document.getElementById("demo").innerHTML = yearJohn</script> -->
-
-<!-- if the scr "Source" of the file was located in a different location it would look like
-
-        <script src="Folder_Location/script.js"></script>
-        
-        -->
 
 </html>
