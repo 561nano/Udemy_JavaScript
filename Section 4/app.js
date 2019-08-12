@@ -9,68 +9,64 @@ GAME RULES: The Pig Game
 
 */
 
-var scores, roundScores, activePlayer;
+var scores, roundScores, activePlayer, gamePlaying;
 
-scores = [0, 0]; //score array for player 1 and 2
-roundScores = 0; //current round score, this will be added to the total of the player score
-activePlayer = 0; //player 1 = 0, player 2 = 1, this matches with array "score"
+// clear the board
+init();
 
-
-// . = class || # = id || hides dice img (below code)
-document.querySelector('.dice').style.display = 'none';
-
-// This will set all the below values to 0 or clear the board/score
-document.getElementById('score-0').textContent = '0';
-document.getElementById('score-1').textContent = '0';
-document.getElementById('current-0').textContent = '0';
-document.getElementById('current-1').textContent = '0';
 
 //you can replace the call back function, with an actual function, this would be considered "anonymous function" and cannot be called.
 //'click' = event, btn = call back function
 document.querySelector('.btn-roll').addEventListener('click', function () {
 
-    // 1. Random the dice between 1 - 6
-    var dice = Math.floor(Math.random() * 6) + 1;
+    if (gamePlaying) {
+        // 1. Random the dice between 1 - 6
+        var dice = Math.floor(Math.random() * 6) + 1;
 
-    // 2. Display the result
-    var diceDOM = document.querySelector('.dice');
-    diceDOM.style.display = 'block';
-    diceDOM.src = 'dice-' + dice + '.png';
+        // 2. Display the result
+        var diceDOM = document.querySelector('.dice');
+        diceDOM.style.display = 'block';
+        diceDOM.src = 'dice-' + dice + '.png';
 
 
-    // 3. Update the round score IF the rolled # is NOT a #1
-    if (dice !== 1 ) {
-        // Add Score
-        roundScores += dice;
-        //Display current score
-        document.querySelector('#current-' + activePlayer).textContent = roundScores;
-    } else {
-        //Next Player turn
-        nextPlayer();
+        // 3. Update the round score IF the rolled # is NOT a #1
+        if (dice !== 1) {
+            // Add Score
+            roundScores += dice;
+            //Display current score
+            document.querySelector('#current-' + activePlayer).textContent = roundScores;
+        } else {
+            //Next Player turn
+            nextPlayer();
+        }
     }
 });
 
 document.querySelector('.btn-hold').addEventListener('click', function () {
-    //add current score to global score
-    scores[activePlayer] += roundScores;
 
-    //update the UI
-    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+    if (gamePlaying) {
+        //add current score to global score
+        scores[activePlayer] += roundScores;
 
-    //check if player won the game
-    if (scores[activePlayer] >=100) {
-        document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
-        document.querySelector('.dice').style.display = 'none';
-        document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
-        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
-    } else {
-        //Next player turn
-        nextPlayer();
+        //update the UI
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+        //check if player won the game
+        if (scores[activePlayer] >= 10) {
+
+            //Tells the users who won
+            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+
+            //does not let the game continue
+            gamePlaying = false;
+        } else {
+            //Next player turn
+            nextPlayer();
+        }
     }
-
-
-
-
 });
 
 //Next Player turn
@@ -91,4 +87,37 @@ function nextPlayer() {
 
     //hide the dice image
     document.querySelector('.dice').style.display = 'none';
+}
+
+document.querySelector('.btn-new').addEventListener('click', init);
+
+function init() {
+    scores = [0, 0]; //score array for player 1 and 2
+    roundScores = 0; //current round score, this will be added to the total of the player score
+    activePlayer = 0; //player 1 = 0, player 2 = 1, this matches with array "score"
+    gamePlaying = true;
+
+    // . = class || # = id || hides dice img (below code)
+    document.querySelector('.dice').style.display = 'none';
+
+    // This will set all the below values to 0 or clear the board/score
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    //changes the winner text to player 1 and player 2
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+
+    //remove winner class
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+
+    //remove active class
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+
+    //add active class to player 1
+    document.querySelector('.player-0-panel').classList.add('active');
 }

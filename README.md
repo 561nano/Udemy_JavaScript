@@ -15,8 +15,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Events and Event Handling: Rolling the Dice
     - [x] Updating Scores and Changing the Active Player
     - [x] Implementing Our 'Hold' Function and the DRY Principle
-    - [ ] Creating a Game Initialization Function
-    - [ ] Finishing Touches: State Variables 
+    - [x] Creating a Game Initialization Function
+    - [x] Finishing Touches: State Variables 
     - [ ] Coding Challenge 6
     - [ ] Coding Challenge 6: Solution - Part 1, 2 & 3
 - [ ] Section 05: Advanced JavaScript: Objects and Functions
