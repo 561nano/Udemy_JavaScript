@@ -32,21 +32,29 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         // 1. Random the dice between 1 - 6
         var dice = Math.floor(Math.random() * 6) + 1;
 
-        // 2. Display the result
-        var diceDOM = document.querySelector('.dice');
-        diceDOM.style.display = 'block';
-        diceDOM.src = 'dice-' + dice + '.png';
-
-
-        // 3. Update the round score IF the rolled # is NOT a #1
-        if (dice !== 1) {
-            // Add Score
-            roundScores += dice;
-            //Display current score
-            document.querySelector('#current-' + activePlayer).textContent = roundScores;
-        } else {
-            //Next Player turn
+        //check to see if the last dice vs the current dice are not both sixes
+        if (lastDice === dice) {
             nextPlayer();
+        } else {
+            //set the last dice
+            lastDice = dice;
+
+            // 2. Display the result
+            var diceDOM = document.querySelector('.dice');
+            diceDOM.style.display = 'block';
+            diceDOM.src = 'dice-' + dice + '.png';
+
+
+            // 3. Update the round score IF the rolled # is NOT a #1
+            if (dice !== 1) {
+                // Add Score
+                roundScores += dice;
+                //Display current score
+                document.querySelector('#current-' + activePlayer).textContent = roundScores;
+            } else {
+                //Next Player turn
+                nextPlayer();
+            }
         }
     }
 });
@@ -85,6 +93,7 @@ function nextPlayer() {
 
     // This will clear the board without clearing global score
     roundScores = 0;
+    lastDice = 0;
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
 
@@ -104,7 +113,8 @@ function init() {
     scores = [0, 0]; //score array for player 1 and 2
     roundScores = 0; //current round score, this will be added to the total of the player score
     activePlayer = 0; //player 1 = 0, player 2 = 1, this matches with array "score"
-    gamePlaying = true;
+    gamePlaying = true; //lets the player play the game
+    lastDice = 0; //reset last dice value
 
     // . = class || # = id || hides dice img (below code)
     document.querySelector('.dice').style.display = 'none';
