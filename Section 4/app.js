@@ -33,7 +33,9 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         var dice = Math.floor(Math.random() * 6) + 1;
 
         //check to see if the last dice vs the current dice are not both sixes
-        if (lastDice === dice) {
+        if (lastDice === dice && dice === 6) {
+            scores[activePlayer] = 0;
+            document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
             nextPlayer();
         } else {
             //set the last dice
