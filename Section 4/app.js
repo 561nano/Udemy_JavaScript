@@ -46,34 +46,49 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         document.querySelector('#current-' + activePlayer).textContent = roundScores;
     } else {
         //Next Player turn
-        // this is a simpler if statement || : = else || this is called tannery operator
-        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        nextPlayer();
+    }
+});
 
-        // This will clear the board without clearing total score
-        roundScores = 0;
-        document.getElementById('current-0').textContent = '0';
-        document.getElementById('current-1').textContent = '0';
+document.querySelector('.btn-hold').addEventListener('click', function () {
+    //add current score to global score
+    scores[activePlayer] += roundScores;
 
-        // This will toggle the active class from play 1 & 2
-        //toggle = if "active is in the class, remove active, else add active
-        //you could replace toggle with add and remove, but toggle makes life easier :)
-        document.querySelector('.player-0-panel').classList.toggle('active');
-        document.querySelector('.player-1-panel').classList.toggle('active');
+    //update the UI
+    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-        document.querySelector('.dice').style.display = 'none'
+    //check if player won the game
+    if (scores[activePlayer] >=100) {
+        document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+        document.querySelector('.dice').style.display = 'none';
+        document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+    } else {
+        //Next player turn
+        nextPlayer();
     }
 
+
+
+
 });
-/*  Section 4 Lecture 5 teaching code
 
-//(Setter) gives the current player the current value of dice roll
- = dice;
+//Next Player turn
+function nextPlayer() {
+    // this is a simpler if statement || : = else || this is called tannery operator
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 
-//same as above + adds it as a html code and emphasis it. instead of only text manipulation.
-document.querySelector('#current-'+ activePlayer).innerHTML = '<em>' + dice + '</em>';
+    // This will clear the board without clearing global score
+    roundScores = 0;
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
 
-//(Getter) only to read the content and store into variable.
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
+    // This will toggle the active class from play 1 & 2
+    //toggle = if "active is in the class, remove active, else add active
+    //you could replace toggle with add and remove, but toggle makes life easier :)
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
 
-*/
+    //hide the dice image
+    document.querySelector('.dice').style.display = 'none';
+}
