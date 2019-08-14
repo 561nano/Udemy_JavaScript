@@ -35,8 +35,10 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         if (dice[0] === 6 && dice[1] === 6) {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+            window.alert("Player " + (activePlayer+1) + " rolled double 6's. \nSorry you lose all your points 😔");
             nextPlayer();
         } else if (dice[0] === 1 || dice[1] === 1) {
+            window.alert("Player " + (activePlayer+1) + " rolled a 1. \nYou lose only your current points 😉");
             nextPlayer();
         } else {
             //set the last dice
@@ -173,5 +175,3 @@ function rollDice() {
 TODO if new final score text box has value > 0,
   then when new game button is press to ask to keep same score, change score or to return to 100
 */
-
-// TODO add image for lost turn
