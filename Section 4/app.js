@@ -32,11 +32,9 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         // 1. Random the dice between 1 - 6
         var dice = rollDice();
 
-        if (final_Score() <= 0 || final_Score() > 2500) {
-            window.alert("Game score must meet the below criteria : \nMust be a number\nGame Score  > 0\nGame Score < or = 2500")
-
+        var x = final_Score();
         //check to see if the last dice vs the current dice are not both sixes
-        } else if (dice[0] === 6 && dice[1] === 6) {
+        if (dice[0] === 6 && dice[1] === 6) {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
             window.alert("Player " + (activePlayer+1) + " rolled double 6's. \nSorry you lose all your points 😔");
@@ -149,9 +147,15 @@ function init() {
 }
 
 function final_Score() {
-    var x = document.querySelector('.final-score').value;
-    if (x > 0 ) {
-        return x
+    var currentPlayerScore = document.querySelector('.final-score').value;
+    console.log(currentPlayerScore);
+
+    if (isNaN(currentPlayerScore) || 2500 < currentPlayerScore || currentPlayerScore < 0) {
+        document.querySelector('.final-score').value = 100;
+        window.alert("Game score must meet the below criteria : \n\nMust be a number\nGame Score  > 0\nGame Score < or = 2500\n\nCurrent Score = 100\nYou can change this value, find below.");
+        return 100;
+    } else if (currentPlayerScore > 0 ) {
+        return currentPlayerScore
     } else {
         return 100;
     }
