@@ -23,34 +23,39 @@ var scores, roundScores, activePlayer, gamePlaying, lastDice;
 // clear the board
 init();
 
-// TODO if the 1 or double 6 is rolled to show message of lost turn
 //you can replace the call back function, with an actual function, this would be considered "anonymous function" and cannot be called.
 //'click' = event, btn = call back function
 document.querySelector('.btn-roll').addEventListener('click', function () {
 
     if (gamePlaying) {
         // 1. Random the dice between 1 - 6
-        var dice = Math.floor(Math.random() * 6) + 1;
+        var dice = rollDice();
 
         //check to see if the last dice vs the current dice are not both sixes
-        if (lastDice === dice && dice === 6) {
+        if (dice[0] === 6 && dice[1] === 6) {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
             nextPlayer();
+        } else if (dice[0] === 1 || dice[1] === 1) {
+            nextPlayer();
         } else {
             //set the last dice
+            // TODO if last dice has a 6 lose a turn and all points
             lastDice = dice;
 
             // 2. Display the result
             var diceDOM = document.querySelector('.dice');
+            var diceDOM2 = document.querySelector('.dice-2');
             diceDOM.style.display = 'block';
-            diceDOM.src = 'dice-' + dice + '.png';
+            diceDOM2.style.display = 'block';
+            diceDOM.src = 'dice-' + dice[0] + '.png';
+            diceDOM2.src = 'dice-' + dice[1] + '.png';
 
 
             // 3. Update the round score IF the rolled # is NOT a #1
             if (dice !== 1) {
                 // Add Score
-                roundScores += dice;
+                roundScores += dice[0]+ dice[1];
                 //Display current score
                 document.querySelector('#current-' + activePlayer).textContent = roundScores;
             } else {
@@ -76,6 +81,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
             //Tells the users who won
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.dice-2').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
 
@@ -107,6 +113,8 @@ function nextPlayer() {
 
     //hide the dice image
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice-2').style.display = 'none';
+
 }
 
 document.querySelector('.btn-new').addEventListener('click', init);
@@ -120,6 +128,8 @@ function init() {
 
     // . = class || # = id || hides dice img (below code)
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice-2').style.display = 'none';
+
 
     // This will set all the below values to 0 or clear the board/score
     document.getElementById('score-0').textContent = '0';
@@ -151,3 +161,17 @@ function final_Score() {
         return 100;
     }
 }
+
+function rollDice() {
+    var dice = [0,0];
+    dice[0] = Math.floor(Math.random() * 6) + 1;
+    dice[1] = Math.floor(Math.random() * 6) + 1;
+    return dice;
+}
+
+/*
+TODO if new final score text box has value > 0,
+  then when new game button is press to ask to keep same score, change score or to return to 100
+*/
+
+// TODO add image for lost turn
