@@ -18,7 +18,8 @@ Change the game to follow these rules:
 3. Add another dice to the game, so that there are two dices now. The player looses his current score when one of them is a 1. (Hint: you will need CSS to position the second dice, so take a look at the CSS code for the first one.)
 */
 
-var scores, roundScores, activePlayer, gamePlaying, lastDice;
+var scores, roundScores, activePlayer, gamePlaying;
+
 
 // clear the board
 init();
@@ -31,8 +32,11 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         // 1. Random the dice between 1 - 6
         var dice = rollDice();
 
+        if (final_Score() <= 0 || final_Score() > 2500) {
+            window.alert("Game score must meet the below criteria : \nMust be a number\nGame Score  > 0\nGame Score < or = 2500")
+
         //check to see if the last dice vs the current dice are not both sixes
-        if (dice[0] === 6 && dice[1] === 6) {
+        } else if (dice[0] === 6 && dice[1] === 6) {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
             window.alert("Player " + (activePlayer+1) + " rolled double 6's. \nSorry you lose all your points 😔");
@@ -41,9 +45,6 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             window.alert("Player " + (activePlayer+1) + " rolled a 1. \nYou lose only your current points 😉");
             nextPlayer();
         } else {
-            //set the last dice
-            // TODO if last dice has a 6 lose a turn and all points
-            lastDice = dice;
 
             // 2. Display the result
             var diceDOM = document.querySelector('.dice');
@@ -54,16 +55,10 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             diceDOM2.src = 'dice-' + dice[1] + '.png';
 
 
-            // 3. Update the round score IF the rolled # is NOT a #1
-            if (dice !== 1) {
-                // Add Score
-                roundScores += dice[0]+ dice[1];
-                //Display current score
-                document.querySelector('#current-' + activePlayer).textContent = roundScores;
-            } else {
-                //Next Player turn
-                nextPlayer();
-            }
+            //Display current score
+            roundScores += dice[0]+ dice[1];
+            document.querySelector('#current-' + activePlayer).textContent = roundScores;
+
         }
     }
 });
@@ -103,7 +98,6 @@ function nextPlayer() {
 
     // This will clear the board without clearing global score
     roundScores = 0;
-    lastDice = 0;
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
 
@@ -126,7 +120,6 @@ function init() {
     roundScores = 0; //current round score, this will be added to the total of the player score
     activePlayer = 0; //player 1 = 0, player 2 = 1, this matches with array "score"
     gamePlaying = true; //lets the player play the game
-    lastDice = 0; //reset last dice value
 
     // . = class || # = id || hides dice img (below code)
     document.querySelector('.dice').style.display = 'none';
