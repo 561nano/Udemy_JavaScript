@@ -7,7 +7,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
 - [x] Section 01: Course Introduction
 - [x] Section 02: JavaScript Language Basics
 - [x] Section 03: How JavaScript works behind the scenes.
-- [ ] Section 04: JavaScript in the Browser: DOM Manipulation and Events
+- [x] Section 04: JavaScript in the Browser: DOM Manipulation and Events
     - [x] The DOM and DOM Manipulation
     - [x] 5-Minute HTML and CSS Crash Course
     - [x] Project Setup and Details 
@@ -17,9 +17,22 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Implementing Our 'Hold' Function and the DRY Principle
     - [x] Creating a Game Initialization Function
     - [x] Finishing Touches: State Variables 
-    - [ ] Coding Challenge 6
-    - [ ] Coding Challenge 6: Solution - Part 1, 2 & 3
+    - [x] Coding Challenge 6
+    - [x] Coding Challenge 6: Solution - Part 1, 2 & 3
 - [ ] Section 05: Advanced JavaScript: Objects and Functions
+    - [x] Section Intro
+    - [x] Everything Is an Object: Inheritance and the Prototype Chain
+    - [x] Creating Objects: Function Constructors
+    - [ ] The Prototype Chain in the Console
+    - [ ] Creating Objects: Object.create
+    - [ ] Primitives vs. Objects
+    - [ ] First Class Functions: Passing Functions as Arguments
+    - [ ] First Class Functions: Functions Returning Functions
+    - [ ] Immediately Invoked Function Expressions (IIFE)
+    - [ ] Closures
+    - [ ] Bind, Call and Apply
+    - [ ] Coding Challenge 7
+    - [ ] Coding Challenge 7: Solution, Part 1 & 2
 - [ ] Section 06: Putting It All Together: The Budget App Project
 - [ ] Section 07: Next Generation JavaScript: Intro to ES6 / ES2015
 - [ ] Section 08: Asynchronous JavaScript: Promises, Async/Await and AJAX
