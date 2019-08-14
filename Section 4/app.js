@@ -23,7 +23,7 @@ var scores, roundScores, activePlayer, gamePlaying, lastDice;
 // clear the board
 init();
 
-
+// TODO if the 1 or double 6 is rolled to show message of lost turn
 //you can replace the call back function, with an actual function, this would be considered "anonymous function" and cannot be called.
 //'click' = event, btn = call back function
 document.querySelector('.btn-roll').addEventListener('click', function () {
@@ -71,7 +71,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
         //check if player won the game
-        if (scores[activePlayer] >= 100) {
+        if (scores[activePlayer] >= final_Score()) {
 
             //Tells the users who won
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
@@ -141,4 +141,13 @@ function init() {
 
     //add active class to player 1
     document.querySelector('.player-0-panel').classList.add('active');
+}
+
+function final_Score() {
+    var x = document.querySelector('.final-score').value;
+    if (x > 0 ) {
+        return x
+    } else {
+        return 100;
+    }
 }
