@@ -383,39 +383,51 @@ just do this with the tools you feel more comfortable at this point).
 */
 
 (function () {
-    function Question (question, playerChoices, correctAnswer) {
+    var gameScore = 0;
+
+    function Question(question, playerChoices, correctAnswer) {
         this.question = question;
         this.playerChoices = playerChoices;
         this.correctAnswer = correctAnswer;
     }
 
-    Question.prototype.displayQuestions = function() {
+    Question.prototype.displayQuestions = function () {
         console.log(this.question);
 
-        for (var i = 0; i<this.playerChoices.length; i++) {
+        for (var i = 0; i < this.playerChoices.length; i++) {
             console.log(i + ': ' + this.playerChoices[i]);
         }
     };
 
     Question.prototype.checkAnswer = function (answer) {
-        if (answer === this.correctAnswer) {
-            console.log('Correct')
+        if (parseInt(answer) === this.correctAnswer) {
+            gameScore++;
+            console.log('Correct!, the current game score: ' + gameScore);
+            Question.prototype.playGame()
+        } else if (answer.toLowerCase() === 'exit') {
+            console.log('You finished the game with ' + gameScore + ' points.')
         } else {
-            console.log('Wrong')
+            console.log('Wrong, the current game score: ' + gameScore);
+            Question.prototype.playGame()
         }
     };
 
-    var qt0 = new Question('Where is the programmer from?', ['Florida', 'California', 'Puerto Rico'], 2);
-    var qt1 = new Question('Where is the programmer now?', ['Florida', 'California', 'Puerto Rico'], 0);
-    var qt2 = new Question('Where is the programmer grandfather?', ['California', 'Puerto Rico'], 0);
+    Question.prototype.playGame = function () {
+        var qt0 = new Question('Where is the programmer from?',
+            ['Florida', 'California', 'Puerto Rico'], 2);
+        var qt1 = new Question('Where is the programmer now?',
+            ['Florida', 'California', 'Puerto Rico'], 0);
+        var qt2 = new Question('Where is the programmer grandfather?',
+            ['California', 'Puerto Rico'], 0);
+        var qtArray = [qt0, qt1, qt2];
 
-    var qtArray = [qt0, qt1, qt2];
-    var randomQuestion = Math.floor(Math.random() * qtArray.length);
+        var randomQuestionNumber = Math.floor(Math.random() * qtArray.length);
+        qtArray[randomQuestionNumber].displayQuestions();
+        var playerAnswer = prompt("What is your answer?");
+        qtArray[randomQuestionNumber].checkAnswer(playerAnswer);
+    };
 
-    qtArray[randomQuestion].displayQuestions();
+    Question.prototype.playGame();
 
-    var playerAnswer = parseInt(prompt("This is a test"));
-
-    qtArray[randomQuestion].checkAnswer(playerAnswer);
 })();
 
