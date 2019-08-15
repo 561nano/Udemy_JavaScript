@@ -65,8 +65,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Creating Objects: Function Constructors
     - [x] The Prototype Chain in the Console
     - [x] Creating Objects: Object.create
-    - [ ] Primitives vs. Objects
-    - [ ] First Class Functions: Passing Functions as Arguments
+    - [x] Primitives vs. Objects
+    - [x] First Class Functions: Passing Functions as Arguments
     - [ ] First Class Functions: Functions Returning Functions
     - [ ] Immediately Invoked Function Expressions (IIFE)
     - [ ] Closures
