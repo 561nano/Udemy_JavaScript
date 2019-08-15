@@ -187,7 +187,7 @@ designQuestion('John');
 interviewQuestion('Soccer Player')('Billy');
  */
 
-/* Section 4 lecture 9 notes & code */
+/* Section 4 lecture 9 notes & code
 // Immediately Invoke function expressions (IIFE)
 
 function game() {
@@ -212,15 +212,131 @@ game();
 // Adding the parameters in the last parentheses
 //a new scope from the outside scope
 //You can call iife once
+ */
+
+/* Section 4 lecture 10 notes & code
+//Closures
+
+function retirement(retirementAge) {
+    var a = ' years left until retirement.';
+    return function (yearOfBirth) {
+        var age = 2019 - yearOfBirth;
+        console.log((retirementAge - age) + a);
+    }
+}
+
+var retirementUS = retirement(66);
+var retirementGermany = retirement(65);
+var retirementIceLand = retirement(67);
+
+//retirement(66)(1990);
+retirementUS(1990);
+retirementGermany(1990);
+retirementIceLand(1990);
+
+//  Rewrite this with closures
+// function interviewQuestion(job) {
+//     if (job === 'designer') {
+//         return function (name) {
+//             console.log(name + ', can you explain what UX design is?');
+//         }
+//     } else if (job === 'teacher') {
+//         return function (name) {
+//             console.log(name + ', what subject do you teach?');
+//         }
+//     } else {
+//         return function (name) {
+//             console.log(name + ', what is it that you do?');
+//         }
+//     }
+// }
+
+function interviewQuestion(job) {
+    return function (name) {
+        if (job === 'designer') {
+            console.log(name + ', can you explain what UX design is?');
+        } else if (job === 'teacher') {
+            console.log(name + ', what subject do you teach?');
+        } else {
+            console.log(name + ', what is it that you do?');
+        }
+    }
+}
+
+interviewQuestion('teacher')('John');
+*/
+
+/* Section 4 lecture 11 notes & code
+// Bind, call & apply
+
+var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    presentation: function (style, timeOfDay) {
+        if (style === 'formal') {
+            console.log('Good ' + timeOfDay + ', Ladies and gentlemen! I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old.');
+        } else if (style === 'friendly') {
+            console.log('Hey! What\'s up? I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '.');
+        }
+    }
+};
+
+var emily = {
+    name: 'Emily',
+    age: 35,
+    job: 'designer'
+};
+
+var mike = {
+    name: 'Mike',
+    age: 35,
+    job: 'designer'
+};
+
+john.presentation('formal', 'morning');
+
+// This allow us to use john.presentation as the main object for emily
+// This is called "Method Borrowing"
+//call = apply - array
+john.presentation.call(emily, 'friendly', 'afternoon');
+
+//apply = call + array
+//john.presentation.apply(emily, ['friendly', 'afternoon']);
+
+// bind is the same as call, but it does not call the function
+// It allows us to store the function and store it for later with predefined parameters
+var johnFriendly = john.presentation.bind(john,'friendly');
+
+// This is called carrying a function with predefined parameters
+johnFriendly('morning');
+johnFriendly('night');
 
 
 
+// example of bind
+var years = [1990, 1965, 1937, 2005, 1998];
 
+//loop function for an array
+function arrayCalc(arr, fn) {
+    var arrRes = [];
+    for (var i = 0; i < arr.length; i++) {
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
 
+function calculateAge(el) {
+    var a = new Date().getFullYear();
+    return a - el;
+}
 
+function isFullAge(limit, el) {
+    return el >= limit;
+}
 
-
-
-
-
-
+var ages = arrayCalc(years,calculateAge);
+var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+console.log(fullJapan);
+console.log(ages);
+*/

@@ -69,8 +69,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] First Class Functions: Passing Functions as Arguments
     - [x] First Class Functions: Functions Returning Functions
     - [x] Immediately Invoked Function Expressions (IIFE)
-    - [ ] Closures
-    - [ ] Bind, Call and Apply
+    - [x] Closures
+    - [x] Bind, Call and Apply
     - [ ] Coding Challenge 7
     - [ ] Coding Challenge 7: Solution, Part 1 & 2
 - [ ] Section 06: Putting It All Together: The Budget App Project
