@@ -63,8 +63,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Section Intro
     - [x] Everything Is an Object: Inheritance and the Prototype Chain
     - [x] Creating Objects: Function Constructors
-    - [ ] The Prototype Chain in the Console
-    - [ ] Creating Objects: Object.create
+    - [x] The Prototype Chain in the Console
+    - [x] Creating Objects: Object.create
     - [ ] Primitives vs. Objects
     - [ ] First Class Functions: Passing Functions as Arguments
     - [ ] First Class Functions: Functions Returning Functions
