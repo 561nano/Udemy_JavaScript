@@ -68,7 +68,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Primitives vs. Objects
     - [x] First Class Functions: Passing Functions as Arguments
     - [x] First Class Functions: Functions Returning Functions
-    - [ ] Immediately Invoked Function Expressions (IIFE)
+    - [x] Immediately Invoked Function Expressions (IIFE)
     - [ ] Closures
     - [ ] Bind, Call and Apply
     - [ ] Coding Challenge 7

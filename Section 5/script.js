@@ -158,7 +158,7 @@ console.log(fullAges);
 console.log(rates);
 */
 
-/* Section 4 lecture 8 notes & code */
+/* Section 4 lecture 8 notes & code
 // Functions returning functions
 
 function interviewQuestion(job) {
@@ -185,3 +185,42 @@ designQuestion('John');
 
 //Calling the function immediately without the need to store it
 interviewQuestion('Soccer Player')('Billy');
+ */
+
+/* Section 4 lecture 9 notes & code */
+// Immediately Invoke function expressions (IIFE)
+
+function game() {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+}
+
+game();
+
+//IIFE Function (Same as above)
+//IIFE helps with data privacy, the below function no one will know the score
+(function () {
+        var score = Math.random() * 10;
+        console.log(score >= 5);
+    })();
+
+//adding parameters
+(function (goodLuck) {
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+})(5);
+// Adding the parameters in the last parentheses
+//a new scope from the outside scope
+//You can call iife once
+
+
+
+
+
+
+
+
+
+
+
+
