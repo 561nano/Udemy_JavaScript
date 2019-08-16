@@ -340,7 +340,7 @@ console.log(fullJapan);
 console.log(ages);
 */
 
-/*// CODING CHALLENGE \\
+/* // CODING CHALLENGE \\
 
 --- Let's build a fun quiz game in the console! ---
 
@@ -366,7 +366,7 @@ The user should input the number of the correct answer such as you displayed it 
 7. Suppose this code would be a plugin for other programmers to use in their code.
 So make sure that all your code is private and doesn't interfere with the other programmers code
 (Hint: we learned a special technique to do exactly that). */
-/* Expert Level
+/* // CODING CHALLENGE: EXPERT LEVEL \\
 ---------------------------------------- Expert level ----------------------------------------
 
 8. After you display the result, display the next random question, so that the game never ends
@@ -403,11 +403,13 @@ just do this with the tools you feel more comfortable at this point).
         if (parseInt(answer) === this.correctAnswer) {
             gameScore++;
             console.log('Correct!, the current game score: ' + gameScore);
+            console.log('------------------------------------------');
             Question.prototype.playGame()
         } else if (answer.toLowerCase() === 'exit') {
             console.log('You finished the game with ' + gameScore + ' points.')
         } else {
             console.log('Wrong, the current game score: ' + gameScore);
+            console.log('------------------------------------------');
             Question.prototype.playGame()
         }
     };
