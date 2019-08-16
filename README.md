@@ -59,7 +59,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Finishing Touches: State Variables 
     - [x] Coding Challenge 6
     - [x] Coding Challenge 6: Solution - Part 1, 2 & 3
-- [ ] Section 05: Advanced JavaScript: Objects and Functions
+- [x] Section 05: Advanced JavaScript: Objects and Functions
     - [x] Section Intro
     - [x] Everything Is an Object: Inheritance and the Prototype Chain
     - [x] Creating Objects: Function Constructors
@@ -71,11 +71,11 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Immediately Invoked Function Expressions (IIFE)
     - [x] Closures
     - [x] Bind, Call and Apply
-    - [ ] Coding Challenge 7
-    - [ ] Coding Challenge 7: Solution, Part 1 & 2
+    - [x] Coding Challenge 7
+    - [x] Coding Challenge 7: Solution, Part 1 & 2
 - [ ] Section 06: Putting It All Together: The Budget App Project
-    - [ ] Section Intro
-    - [ ] Project Setup and Details
+    - [x] Section Intro
+    - [x] Project Setup and Details
     - [ ] Project Planning and Architecture: Step 1
     - [ ] Implementing the Module Pattern
     - [ ] Setting up the First Event Listeners
