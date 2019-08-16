@@ -76,8 +76,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
 - [ ] Section 06: Putting It All Together: The Budget App Project
     - [x] Section Intro
     - [x] Project Setup and Details
-    - [ ] Project Planning and Architecture: Step 1
-    - [ ] Implementing the Module Pattern
+    - [x] Project Planning and Architecture: Step 1
+    - [x] Implementing the Module Pattern
     - [ ] Setting up the First Event Listeners
     - [ ] Reading Input Data
     - [ ] Creating an Initialization Function
