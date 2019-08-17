@@ -82,7 +82,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Reading Input Data
     - [x] Creating an Initialization Function
     - [x] Creating Income and Expense Function Constructors
-    - [ ] Adding a New Item to Our Budget Controller
+    - [x] Adding a New Item to Our Budget Controller
     - [ ] Adding a New Item to the UI
     - [ ] Clearing Our Input Fields
     - [ ] Updating the Budget: Controller
