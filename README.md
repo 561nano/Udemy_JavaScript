@@ -79,8 +79,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Project Planning and Architecture: Step 1
     - [x] Implementing the Module Pattern
     - [x] Setting up the First Event Listeners
-    - [ ] Reading Input Data
-    - [ ] Creating an Initialization Function
+    - [x] Reading Input Data
+    - [x] Creating an Initialization Function
     - [ ] Creating Income and Expense Function Constructors
     - [ ] Adding a New Item to Our Budget Controller
     - [ ] Adding a New Item to the UI
