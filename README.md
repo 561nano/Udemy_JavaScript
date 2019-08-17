@@ -81,7 +81,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Setting up the First Event Listeners
     - [x] Reading Input Data
     - [x] Creating an Initialization Function
-    - [ ] Creating Income and Expense Function Constructors
+    - [x] Creating Income and Expense Function Constructors
     - [ ] Adding a New Item to Our Budget Controller
     - [ ] Adding a New Item to the UI
     - [ ] Clearing Our Input Fields
