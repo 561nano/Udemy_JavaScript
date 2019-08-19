@@ -85,7 +85,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Adding a New Item to Our Budget Controller
     - [x] Adding a New Item to the UI
     - [x] Clearing Our Input Fields
-    - [ ] Updating the Budget: Controller
+    - [x] Updating the Budget: Controller
     - [ ] Updating the Budget: Budget Controller
     - [ ] Updating the Budget: UI Controller
     - [ ] Project Planning and Architecture: Step 2
