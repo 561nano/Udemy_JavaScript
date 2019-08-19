@@ -87,7 +87,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Clearing Our Input Fields
     - [x] Updating the Budget: Controller
     - [x] Updating the Budget: Budget Controller
-    - [ ] Updating the Budget: UI Controller
+    - [x] Updating the Budget: UI Controller
     - [ ] Project Planning and Architecture: Step 2
     - [ ] Event Delegation
     - [ ] Setting up the Delete Event Listener Using Event Delegation
