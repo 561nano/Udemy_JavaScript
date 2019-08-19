@@ -84,7 +84,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Creating Income and Expense Function Constructors
     - [x] Adding a New Item to Our Budget Controller
     - [x] Adding a New Item to the UI
-    - [ ] Clearing Our Input Fields
+    - [x] Clearing Our Input Fields
     - [ ] Updating the Budget: Controller
     - [ ] Updating the Budget: Budget Controller
     - [ ] Updating the Budget: UI Controller

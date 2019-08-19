@@ -21,7 +21,6 @@ var budgetController = (function () {
             exp: 0,
             inc: 0
         }
-
     };
 
     return {
@@ -95,7 +94,22 @@ var UIController = (function () {
             newHtml = newHtml.replace('%value%', obj.value);
 
             // Insert the HTML into the DOM
-            document.querySelector(element).insertAdjacentHTML('beforeend',newHtml);
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        },
+
+        clearFields: function () {
+            var fields, fieldsArr;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+            // the above code returns a NodeList (list), we can change this to a array from getting the function of slice from Array prototype
+            fieldsArr = Array.prototype.slice.call(fields);
+            // This is a for loop
+            fieldsArr.forEach(function (current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArr[0].focus();
         },
 
         getDOMstrings: function () {
@@ -133,15 +147,20 @@ var controller = (function (budgetCtrl, UICtrl) {
 
         // TODO 3. Add the item to the UI
         UICtrl.addListItem(newItem, input.type);
-        // TODO 4. Calculate the budget
 
-        // TODO 5. Display the budget on the UI
+        // TODO 4. Clear the fields
+        UICtrl.clearFields();
+
+        // TODO 5. Calculate the budget
+
+        // TODO 6. Display the budget on the UI
 
     };
 
     return {
         init: function () {
             setUpEventListeners();
+            console.log("Application is up and running.")
         }
     }
 
