@@ -1,4 +1,4 @@
-/* Let & Const
+/* Let & Const in ES6
 
 // ES5 part 1
 var name5 = 'Jane Smith';
@@ -70,6 +70,27 @@ for (let i = 0; i < 5; i++){
 console.log(i); // i = 23
 
  */
+
+/* Blocks and IIFEs in ES6
+
+// ES6
+{
+    const a = 1;
+    let b = 2;
+    var c = 3;
+}
+
+//console.log(a + b); //calling outside of block scope O.O.S error
+console.log(c); // var is not blocked scoped
+
+
+// ES5
+(function() {
+    var c = 3;
+})();
+
+//console.log(c); //calling outside of function scope O.O.S error
+*/
 
 
 
