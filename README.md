@@ -73,7 +73,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Bind, Call and Apply
     - [x] Coding Challenge 7
     - [x] Coding Challenge 7: Solution, Part 1 & 2
-- [ ] Section 06: Putting It All Together: The Budget App Project
+- [x] Section 06: Putting It All Together: The Budget App Project
     - [x] Section Intro
     - [x] Project Setup and Details
     - [x] Project Planning and Architecture: Step 1
@@ -99,8 +99,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Updating the Percentages: UI Controller
     - [x] Formatting Our Budget Numbers: String Manipulation
     - [x] Displaying the Current Month and Year
-    - [ ] Finishing Touches: Improving the UX
-    - [ ] We’ve Made It! Final Considerations
+    - [x] Finishing Touches: Improving the UX
+    - [x] We’ve Made It! Final Considerations
 - [ ] Section 07: Next Generation JavaScript: Intro to ES6 / ES2015
     - [ ] Section Intro
     - [ ] What's new in ES6 / ES2015
