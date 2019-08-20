@@ -93,8 +93,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Setting up the Delete Event Listener Using Event Delegation
     - [x] Deleting an Item from Our Budget Controller
     - [x] Deleting an Item from the UI
-    - [ ] Project Planning and Architecture: Step 3
-    - [ ] Updating the Percentages: Controller
+    - [x] Project Planning and Architecture: Step 3
+    - [x] Updating the Percentages: Controller
     - [ ] Updating the Percentages: Budget Controller
     - [ ] Updating the Percentages: UI Controller
     - [ ] Formatting Our Budget Numbers: String Manipulation

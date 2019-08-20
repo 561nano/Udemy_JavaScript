@@ -172,7 +172,6 @@ var UIController = (function () {
             fieldsArr.forEach(function (current, index, array) {
                 current.value = "";
             });
-
             fieldsArr[0].focus();
         },
 
@@ -214,6 +213,16 @@ var controller = (function (budgetCtrl, UICtrl) {
 
     };
 
+    var updatePercentages = function () {
+
+        // TODO 1. Calculate percentages
+
+        // TODO 2. Read percentages from budget controller
+
+        // TODO 3. Update the UI with new percentages
+
+    };
+
     var updateBudget = function () {
 
         // 1. Calculate the budget
@@ -245,6 +254,9 @@ var controller = (function (budgetCtrl, UICtrl) {
 
             // 5. Calculate and Update budget
             updateBudget();
+
+            // 6. calculate and update percentages
+            updatePercentages()
         }
     };
 
@@ -266,6 +278,9 @@ var controller = (function (budgetCtrl, UICtrl) {
 
             // 3. Update and show the new budget
             updateBudget();
+
+            // 4. calculate and update percentages
+            updatePercentages()
         }
     };
 
