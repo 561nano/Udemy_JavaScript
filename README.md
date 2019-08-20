@@ -107,7 +107,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Variable Declarations with let and const
     - [x] Blocks and IIFEs
     - [x] Strings in ES6 / ES2015
-    - [ ] Arrow Functions: Basics
+    - [x] Arrow Functions: Basics
     - [ ] Arrow Functions: Lexical 'this' Keyword
     - [ ] Destructuring
     - [ ] Arrays in ES6 / ES2015

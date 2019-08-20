@@ -114,6 +114,30 @@ console.log(n.includes(' ')); //are the characters in the string
 console.log(`${firstName} `.repeat(5)); //repeat the log
 */
 
+/* Arrow functions in ES6 */
 
+const years = [1990, 1965, 1982, 1937];
 
+// ES5
+//map loops threw an array, needs to pass in a method, function or anonymous functions 'years.map(Math.sqrt)'
+var ages_ES5 = years.map(function (el) {
+    return new Date().getFullYear() - el;
+});
+console.log(ages_ES5);
+console.log();
 
+// ES6 single arguments
+let ages_ES6 = years.map(el => new Date().getFullYear()-el); //This is the same as above
+console.log(ages_ES6);
+
+// ES6-1 multiple arguments
+ages_ES6 = years.map((el, index) => `Age element ${index + 1}: ${new Date().getFullYear() - el}.`);
+console.log(ages_ES6);
+
+// ES6-2 multiple arguments & multi line
+ages_ES6 = years.map((el, index) => {
+    const now = new Date().getFullYear();
+    const age = now - el;
+    return `Age element ${index + 1}: ${age}.`
+});
+console.log(ages_ES6);
