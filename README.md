@@ -95,8 +95,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Deleting an Item from the UI
     - [x] Project Planning and Architecture: Step 3
     - [x] Updating the Percentages: Controller
-    - [ ] Updating the Percentages: Budget Controller
-    - [ ] Updating the Percentages: UI Controller
+    - [x] Updating the Percentages: Budget Controller
+    - [x] Updating the Percentages: UI Controller
     - [ ] Formatting Our Budget Numbers: String Manipulation
     - [ ] Displaying the Current Month and Year
     - [ ] Finishing Touches: Improving the UX

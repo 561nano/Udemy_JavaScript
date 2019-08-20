@@ -4,6 +4,19 @@ var budgetController = (function () {
         this.id = id;
         this.description = description;
         this.value = value;
+        this.percentage = -1;
+    };
+
+    Expense.prototype.calcPercentage = function (totalIncome) {
+        if (totalIncome > 0) {
+            this.percentage = Math.round((this.value / totalIncome) * 100);
+        } else {
+            this.percentage = -1;
+        }
+    };
+
+    Expense.prototype.getsPercentage = function () {
+        return this.percentage;
     };
 
     var Income = function (id, description, value) {
@@ -68,8 +81,8 @@ var budgetController = (function () {
 
             index = ids.indexOf(id);
 
-            if (index !== -1){
-                data.allItems[type].splice(index,1);
+            if (index !== -1) {
+                data.allItems[type].splice(index, 1);
             }
 
         },
@@ -89,6 +102,19 @@ var budgetController = (function () {
             } else {
                 data.percentage = -1;
             }
+        },
+
+        calculatePercentages: function () {
+            data.allItems.exp.forEach(function (cur) {
+                cur.calcPercentage(data.totals.inc);
+            });
+        },
+
+        getPercentages: function () {
+            var allPerc = data.allItems.exp.map(function (cur) {
+                return cur.getsPercentage();
+            });
+            return allPerc;
         },
 
         getBudget: function () {
@@ -122,7 +148,8 @@ var UIController = (function () {
         incomeLabel: '.budget__income--value',
         expenseLabel: '.budget__expenses--value',
         percentageLabel: '.budget__expenses--percentage',
-        container: '.container'
+        container: '.container',
+        expensePercLabel: '.item__percentage'
     };
 
     return {
@@ -155,9 +182,9 @@ var UIController = (function () {
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
 
-        deleteListItem: function(selectorID){
+        deleteListItem: function (selectorID) {
 
-            var el =document.getElementById(selectorID);
+            var el = document.getElementById(selectorID);
             el.parentNode.removeChild(el);
         },
 
@@ -185,6 +212,25 @@ var UIController = (function () {
             } else {
                 document.querySelector(DOMstrings.percentageLabel).textContent = '---';
             }
+        },
+
+        displayPercentages: function (percentages) {
+
+            var fields = document.querySelectorAll(DOMstrings.expensePercLabel);
+
+            var nodeListForEach = function (list, callback) {
+                for (var i = 0; i < list.length; i++) {
+                    callback(list[i], i);
+                }
+            };
+
+            nodeListForEach(fields, function (current, index) {
+                if (percentages[index] > 0) {
+                    current.textContent = percentages[index] + '%';
+                } else {
+                    current.textContent = '---';
+                }
+            });
         },
 
         getDOMstrings: function () {
@@ -215,12 +261,14 @@ var controller = (function (budgetCtrl, UICtrl) {
 
     var updatePercentages = function () {
 
-        // TODO 1. Calculate percentages
+        // 1. Calculate percentages
+        budgetCtrl.calculatePercentages();
 
-        // TODO 2. Read percentages from budget controller
+        // 2. Read percentages from budget controller
+        var percentages = budgetCtrl.getPercentages();
 
-        // TODO 3. Update the UI with new percentages
-
+        // 3. Update the UI with new percentages
+        UICtrl.displayPercentages(percentages);
     };
 
     var updateBudget = function () {
@@ -271,7 +319,7 @@ var controller = (function (budgetCtrl, UICtrl) {
             ID = parseInt(splitID[1]);
 
             // 1. delete the item from the data structure
-            budgetCtrl.deleteItem(type, ID)
+            budgetCtrl.deleteItem(type, ID);
 
             // 2. Delete the item from the UI
             UICtrl.deleteListItem(itemID);
