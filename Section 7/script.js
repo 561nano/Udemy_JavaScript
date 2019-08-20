@@ -92,6 +92,27 @@ console.log(c); // var is not blocked scoped
 //console.log(c); //calling outside of function scope O.O.S error
 */
 
+/* Strings in ES6
+
+let firstName = 'John';
+let lastName = 'Smith';
+const yearOfBirth = 1990;
+
+function calcAge(year) {
+    return new Date().getFullYear() - year;
+}
+
+// ES5
+console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + yearOfBirth + '. Today, he is ' + calcAge(yearOfBirth) + ' years old.');
+// ES6 template literals
+console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calcAge(yearOfBirth)} years old.`);
+
+const n = `${firstName} ${lastName}`;
+console.log(n.startsWith('J')); //check the first character
+console.log(n.endsWith('Sm')); //check the last character
+console.log(n.includes(' ')); //are the characters in the string
+console.log(`${firstName} `.repeat(5)); //repeat the log
+*/
 
 
 
