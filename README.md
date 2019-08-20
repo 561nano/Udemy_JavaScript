@@ -108,7 +108,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Blocks and IIFEs
     - [x] Strings in ES6 / ES2015
     - [x] Arrow Functions: Basics
-    - [ ] Arrow Functions: Lexical 'this' Keyword
+    - [x] Arrow Functions: Lexical 'this' Keyword
     - [ ] Destructuring
     - [ ] Arrays in ES6 / ES2015
     - [ ] The Spread Operator

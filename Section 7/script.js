@@ -114,7 +114,7 @@ console.log(n.includes(' ')); //are the characters in the string
 console.log(`${firstName} `.repeat(5)); //repeat the log
 */
 
-/* Arrow functions in ES6 */
+/* Arrow functions: Basic in ES6
 
 const years = [1990, 1965, 1982, 1937];
 
@@ -141,3 +141,80 @@ ages_ES6 = years.map((el, index) => {
     return `Age element ${index + 1}: ${age}.`
 });
 console.log(ages_ES6);
+*/
+
+/* Arrow Functions: Lexical 'this' Keyword in ES6
+
+// ES5
+var box_ES5 = {
+    color: 'green',
+    position: 1,
+    clickMe: function () {
+        // this is a workaround since a function with a function will point to the global scope and not to the object scope
+        var self = this;
+
+        document.querySelector('.green').addEventListener('click', function () {
+            var str = 'This is box number ' + self.position + ' and it is ' + self.color;
+            alert(str);
+        });
+    }
+};
+
+//box_ES5.clickMe(); // This will provide undefined
+
+// ES6
+const box_ES6 = {
+    color: 'green',
+    position: 1,
+    clickMe: function () {
+        document.querySelector('.green').addEventListener('click', () => {
+            var str = 'This is box number ' + this.position + ' and it is ' + this.color;
+            alert(str);
+        });
+    }
+};
+
+box_ES6.clickMe(); // This will provide green and 1
+
+// ES6-1
+const box_ES6_1 = {
+    color: 'green',
+    position: 1,
+    clickMe: () => {
+        document.querySelector('.green').addEventListener('click', () => {
+            //
+            var str = 'This is box number ' + this.position + ' and it is ' + this.color;
+            alert(str);
+        });
+    }
+};
+
+//box_ES6_1.clickMe(); // This will provide undefined
+
+
+function Person(name) {
+    this.name = name;
+}
+
+var friends = ['Bob', 'Jane', 'Mark'];
+
+// ES5
+Person.prototype.myFriends_ES5 = function (friends) {
+    var arr = friends.map(function (el) {
+        return this.name + ' is  friends with ' + el; //this will point to the global object without the .bind(this) method
+    }.bind(this));
+    console.log(arr);
+};
+
+new Person('John').myFriends_ES5(friends);
+
+
+//ES6
+Person.prototype.myFriends_ES6 = function (friends) {
+    var arr = friends.map(el => `${this.name} is friends with ${el}`);
+    console.log(arr);
+};
+
+new Person('Mikey').myFriends_ES6(friends);
+
+ */
