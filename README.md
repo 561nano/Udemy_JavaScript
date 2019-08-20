@@ -109,7 +109,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Strings in ES6 / ES2015
     - [x] Arrow Functions: Basics
     - [x] Arrow Functions: Lexical 'this' Keyword
-    - [ ] Destructuring
+    - [x] Destructuring
     - [ ] Arrays in ES6 / ES2015
     - [ ] The Spread Operator
     - [ ] Rest Parameters

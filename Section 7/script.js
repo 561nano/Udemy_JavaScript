@@ -218,3 +218,59 @@ Person.prototype.myFriends_ES6 = function (friends) {
 new Person('Mikey').myFriends_ES6(friends);
 
  */
+
+/* Destructuring */
+
+//ES5
+var john = ['John', 26];
+var name_ES5 = john[0];
+var age_ES5 = john[1];
+
+
+// ES6 array
+const [name_ES6, age_ES6] = ['John', 26];
+console.log(name_ES6);
+console.log(age_ES6);
+
+
+// ES6 objects
+const obj = {
+    firstName: 'John',
+    lastName: 'Smith'
+};
+
+const {firstName, lastName} = obj;
+console.log(firstName);
+console.log(lastName);
+
+// ES6 objects with different arguments names
+const {firstName: a, lastName: b} = obj;
+console.log(a);
+console.log(b);
+
+
+// ES6 part 2
+function calcAgeRet(year) {
+    const age = new Date().getFullYear() - year;
+    return [age, 65 - age];
+}
+
+const [age, retirement] = calcAgeRet(1990);
+console.log(age);
+console.log(retirement);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
