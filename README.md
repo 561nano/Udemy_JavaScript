@@ -97,7 +97,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Updating the Percentages: Controller
     - [x] Updating the Percentages: Budget Controller
     - [x] Updating the Percentages: UI Controller
-    - [ ] Formatting Our Budget Numbers: String Manipulation
+    - [x] Formatting Our Budget Numbers: String Manipulation
     - [ ] Displaying the Current Month and Year
     - [ ] Finishing Touches: Improving the UX
     - [ ] We’ve Made It! Final Considerations
