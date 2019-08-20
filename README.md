@@ -102,8 +102,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Finishing Touches: Improving the UX
     - [x] We’ve Made It! Final Considerations
 - [ ] Section 07: Next Generation JavaScript: Intro to ES6 / ES2015
-    - [ ] Section Intro
-    - [ ] What's new in ES6 / ES2015
+    - [x] Section Intro
+    - [x] What's new in ES6 / ES2015
     - [ ] Variable Declarations with let and const
     - [ ] Blocks and IIFEs
     - [ ] Strings in ES6 / ES2015
