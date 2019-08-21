@@ -219,7 +219,7 @@ new Person('Mikey').myFriends_ES6(friends);
 
  */
 
-/* Destructuring */
+/* Destructuring in ES6
 
 //ES5
 var john = ['John', 26];
@@ -259,18 +259,49 @@ const [age, retirement] = calcAgeRet(1990);
 console.log(age);
 console.log(retirement);
 
+*/
 
+/* Arrays in ES6
+const boxes = document.querySelectorAll('.box');
 
+// ES5 NodeList => Array
+var boxesArr_ES5 = Array.prototype.slice.call(boxes); //This is a hack to convert NodeList to array
+boxesArr_ES5.forEach(function (cur) {
+    cur.style.backgroundColor = 'pink';
+});
 
+// ES6 NodeList => Array
+const boxesArr_ES6 = Array.from(boxes); // TODO NodeList to Array (Proper way)
+boxesArr_ES6.forEach(cur => cur.style.backgroundColor = 'dodgerblue');
 
+// ES5 For Loop
+for (var i = 0; i < boxesArr_ES5.length; i++) {
+    if (boxesArr_ES5[i].className === 'box blue') {
+        continue;
+    }
+    boxesArr_ES5[i].textContent = 'I changed to blue!'
+}
 
+// ES6 For of Loop
+for (const cur of boxesArr_ES6) {
+    if (cur.className.includes('blue')) {
+        continue;
+    }
+    cur.textContent = 'I changed to blue Again!'
+}
 
+// ES5 Find Index & Find true value
+var ages = [12, 17, 8, 21, 14, 11];
 
+var full = ages.map(function (cur) {
+    return cur >= 18;
+});
+console.log(full);
+console.log(full.indexOf(true));
+console.log(ages[full.indexOf(true)]);
 
+// ES6 Find Index & Find true value
+console.log(ages.findIndex(cur => cur >= 18));
+console.log(ages.find(cur => cur >= 18));
 
-
-
-
-
-
-
+*/
