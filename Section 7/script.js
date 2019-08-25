@@ -306,7 +306,7 @@ console.log(ages.find(cur => cur >= 18));
 
 */
 
-/* Lecture: Spread operator */
+/* Spread operator in ES6
 
 function addFourAges(a, b, c, d) {
     return a + b + c + d;
@@ -337,3 +337,50 @@ const boxes = document.querySelectorAll('.box');
 const all = [h, ...boxes];
 
 Array.from(all).forEach(cur => cur.style.color = 'pink');
+
+ */
+
+/* Rest parameters in ES6
+
+//ES5
+function isFullAge_ES5() {
+    //console.log(arguments);
+    var argsArr = Array.prototype.slice.call(arguments);
+
+    argsArr.forEach(function (cur) {
+        console.log((new Date().getFullYear() - cur) >= 18);
+    })
+}
+
+isFullAge_ES5(1990, 1999, 1965, 2016, 1987);
+
+//ES6
+function isFullAge_ES6(...years) {
+    years.forEach(cur => console.log( (new Date().getFullYear() - cur) >= 18));
+}
+
+console.log("------------------------");
+isFullAge_ES6(1990, 1999, 1965, 2016, 1987);
+
+
+//ES5
+function isFullAge_ES5_1(limit) {
+    var argsArr = Array.prototype.slice.call(arguments, 1);
+
+    argsArr.forEach(function(cur) {
+        console.log((new Date().getFullYear() - cur) >= limit);
+    })
+}
+
+console.log("------------------------");
+isFullAge_ES5_1(16, 1990, 1999, 1965, 2016, 1987);
+
+//ES6
+function isFullAge6(limit, ...years) {
+    years.forEach(cur => console.log( (new Date().getFullYear() - cur) >= limit));
+}
+
+console.log("------------------------");
+isFullAge6(16, 1990, 1999, 1965, 2016, 1987);
+
+ */
