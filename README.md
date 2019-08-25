@@ -111,7 +111,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Arrow Functions: Lexical 'this' Keyword
     - [x] Destructuring
     - [x] Arrays in ES6 / ES2015
-    - [ ] The Spread Operator
+    - [x] The Spread Operator
     - [ ] Rest Parameters
     - [ ] Default Parameters
     - [ ] Maps
