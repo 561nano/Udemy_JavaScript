@@ -114,7 +114,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] The Spread Operator
     - [x] Rest Parameters
     - [x] Default Parameters
-    - [ ] Maps
+    - [x] Maps
     - [ ] Classes
     - [ ] Classes with Subclasses
     - [ ] Coding Challenge 8
