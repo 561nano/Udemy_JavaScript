@@ -384,3 +384,39 @@ console.log("------------------------");
 isFullAge6(16, 1990, 1999, 1965, 2016, 1987);
 
  */
+
+/* Default Parameters in ES6
+
+// ES5
+function SmithPerson_ES5(firstName, yearOfBirth, lastName, nationality) {
+
+    lastName === undefined ? lastName = 'Smith' : lastName = lastName;
+    nationality === undefined ? nationality = 'american' : nationality = nationality;
+
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationality = nationality;
+}
+
+var john_ES5 = new SmithPerson_ES5('John', 1990);
+var emily_ES = new SmithPerson_ES5('Emily', 1983, 'Diaz', 'spanish');
+
+console.log(john_ES5);
+console.log(emily_ES);
+
+//ES6
+function SmithPerson_ES6(firstName, yearOfBirth, lastName = 'Smith', nationality = 'american') {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationality = nationality;
+}
+
+let john_ES6 = new SmithPerson_ES6('John', 1990);
+let emily_ES6 = new SmithPerson_ES6('Emily', 1983, 'Diaz', 'spanish');
+
+console.log(john_ES6);
+console.log(emily_ES6);
+
+ */

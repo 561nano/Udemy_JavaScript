@@ -113,7 +113,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Arrays in ES6 / ES2015
     - [x] The Spread Operator
     - [x] Rest Parameters
-    - [ ] Default Parameters
+    - [x] Default Parameters
     - [ ] Maps
     - [ ] Classes
     - [ ] Classes with Subclasses
