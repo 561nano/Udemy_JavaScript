@@ -121,8 +121,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
 - [ ] Section 08: Asynchronous JavaScript: Promises, Async/Await and AJAX
     - [x] Section Intro
     - [x] An Example of Asynchronous JavaScript
-    - [ ] Understanding Asynchronous JavaScript: The Event Loop
-    - [ ] The Old Way: Asynchronous JavaScript with Callbacks
+    - [x] Understanding Asynchronous JavaScript: The Event Loop
+    - [x] The Old Way: Asynchronous JavaScript with Callbacks
     - [ ] From Callback Hell to Promises
     - [ ] From Promises to Async/Await
     - [ ] AJAX and APIs
