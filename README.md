@@ -124,7 +124,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Understanding Asynchronous JavaScript: The Event Loop
     - [x] The Old Way: Asynchronous JavaScript with Callbacks
     - [x] From Callback Hell to Promises
-    - [ ] From Promises to Async/Await
+    - [x] From Promises to Async/Await
     - [ ] AJAX and APIs
     - [ ] Making AJAX Calls with Fetch and Promises
     - [ ] Making AJAX Calls with Fetch and Async/Await

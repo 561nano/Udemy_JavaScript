@@ -59,6 +59,7 @@ const getRelated = publisher => {
     });
 };
 
+/*
 getIDs
     .then(IDs => {
         console.log(IDs);
@@ -74,3 +75,17 @@ getIDs
     .catch(error => {
         console.log(error);
     });
+    */
+
+async function getRecipesAW() {
+    const IDs = await getIDs;
+    console.log(IDs);
+    const recipe = await getRecipe(IDs[2]);
+    console.log(recipe);
+    const related = await getRelated('Christian');
+    console.log(related);
+
+    return recipe;
+}
+
+getRecipesAW().then(result => console.log('It worked'));
