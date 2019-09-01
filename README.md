@@ -118,7 +118,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Classes
     - [x] Classes with Subclasses
     - [x] Coding Challenge 8 & Solution
-- [ ] Section 08: Asynchronous JavaScript: Promises, Async/Await and AJAX
+- [x] Section 08: Asynchronous JavaScript: Promises, Async/Await and AJAX
     - [x] Section Intro
     - [x] An Example of Asynchronous JavaScript
     - [x] Understanding Asynchronous JavaScript: The Event Loop
@@ -127,7 +127,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] From Promises to Async/Await
     - [x] AJAX and APIs
     - [x] Making AJAX Calls with Fetch and Promises
-    - [ ] Making AJAX Calls with Fetch and Async/Await
+    - [x] Making AJAX Calls with Fetch and Async/Await
 - [ ] Section 09: Modern JavaScript: Using ES6, NPM, Babel and Webpack
     - [ ] Section Intro
     - [ ] Project Overview
