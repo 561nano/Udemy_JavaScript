@@ -125,8 +125,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] The Old Way: Asynchronous JavaScript with Callbacks
     - [x] From Callback Hell to Promises
     - [x] From Promises to Async/Await
-    - [ ] AJAX and APIs
-    - [ ] Making AJAX Calls with Fetch and Promises
+    - [x] AJAX and APIs
+    - [x] Making AJAX Calls with Fetch and Promises
     - [ ] Making AJAX Calls with Fetch and Async/Await
 - [ ] Section 09: Modern JavaScript: Using ES6, NPM, Babel and Webpack
     - [ ] Section Intro

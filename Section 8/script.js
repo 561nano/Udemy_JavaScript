@@ -35,6 +35,7 @@ function getRecipe() {
 getRecipe();
 */
 
+/*
 const getIDs = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve([523, 883, 432, 974]);
@@ -59,7 +60,7 @@ const getRelated = publisher => {
     });
 };
 
-/*
+/!*
 getIDs
     .then(IDs => {
         console.log(IDs);
@@ -75,7 +76,7 @@ getIDs
     .catch(error => {
         console.log(error);
     });
-    */
+    *!/
 
 async function getRecipesAW() {
     const IDs = await getIDs;
@@ -88,4 +89,21 @@ async function getRecipesAW() {
     return recipe;
 }
 
-getRecipesAW().then(result => console.log('It worked'));
+getRecipesAW().then(result => console.log('It worked'));*/
+
+function getWeather(woeid = 2487956) {
+    fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)
+        .then(result => {
+            //console.log(result);
+            return result.json();
+        })
+        .then(data => {
+            //console.log(data);
+            const today = data.consolidated_weather[0];
+            console.log(`Temperatures in ${data.title} stays between ${today.min_temp} and ${today.max_temp}.`);
+        })
+        .catch(error => {
+            console.log("Nope")
+        });
+}
+getWeather(44418);
