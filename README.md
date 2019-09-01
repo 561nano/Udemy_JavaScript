@@ -101,7 +101,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Displaying the Current Month and Year
     - [x] Finishing Touches: Improving the UX
     - [x] We’ve Made It! Final Considerations
-- [ ] Section 07: Next Generation JavaScript: Intro to ES6 / ES2015
+- [x] Section 07: Next Generation JavaScript: Intro to ES6 / ES2015
     - [x] Section Intro
     - [x] What's new in ES6 / ES2015
     - [x] Variable Declarations with let and const
@@ -117,7 +117,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Maps
     - [x] Classes
     - [x] Classes with Subclasses
-    - [ ] Coding Challenge 8 & Solution
+    - [x] Coding Challenge 8 & Solution
 - [ ] Section 08: Asynchronous JavaScript: Promises, Async/Await and AJAX
     - [ ] Section Intro
     - [ ] An Example of Asynchronous JavaScript
