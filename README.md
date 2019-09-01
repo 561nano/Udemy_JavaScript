@@ -116,7 +116,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Default Parameters
     - [x] Maps
     - [x] Classes
-    - [ ] Classes with Subclasses
+    - [x] Classes with Subclasses
     - [ ] Coding Challenge 8
     - [ ] Coding Challenge 8: Solution
 - [ ] Section 08: Asynchronous JavaScript: Promises, Async/Await and AJAX

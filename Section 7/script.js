@@ -500,3 +500,70 @@ const john_ES6 = new Person_ES6('John', 1990, 'teacher');
 Person_ES6.greeting();
 
 */
+
+/* Classes and subclasses in ES6 */
+
+//ES5
+var Person_ES5 = function(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+};
+
+Person_ES5.prototype.calculateAge = function() {
+    var age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+};
+
+var Athlete_ES5 = function(name, yearOfBirth, job, olymicGames, medals) {
+    Person_ES5.call(this, name, yearOfBirth, job);
+    this.olymicGames = olymicGames;
+    this.medals = medals;
+};
+
+Athlete_ES5.prototype = Object.create(Person_ES5.prototype);
+
+
+Athlete_ES5.prototype.wonMedal = function() {
+    this.medals++;
+    console.log(this.medals);
+};
+
+
+var johnAthlete5 = new Athlete_ES5('John', 1990, 'swimmer', 3, 10);
+
+johnAthlete5.calculateAge();
+johnAthlete5.wonMedal();
+
+
+//ES6
+class Person_ES6 {
+    constructor (name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+
+    calculateAge() {
+        var age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+    }
+}
+
+class Athlete_ES6 extends Person_ES6 {
+    constructor(name, yearOfBirth, job, olympicGames, medals) {
+        super(name, yearOfBirth, job);
+        this.olympicGames = olympicGames;
+        this.medals = medals;
+    }
+
+    wonMedal() {
+        this.medals++;
+        console.log(this.medals);
+    }
+}
+
+const johnAthlete_ES6 = new Athlete_ES6('John', 1990, 'swimmer', 3, 10);
+
+johnAthlete_ES6.wonMedal();
+johnAthlete_ES6.calculateAge();
