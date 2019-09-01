@@ -460,3 +460,43 @@ const ans = parseInt(prompt('Write the correct answer'));
 console.log(question.get(ans === question.get('correct')));
 
 */
+
+/* Classes in ES6
+
+//ES5
+var Person_ES5 = function (name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+};
+
+Person_ES5.prototype.calculateAge = function () {
+    var age = new Date().getFullYear - this.yearOfBirth;
+    console.log(age);
+};
+
+var john5 = new Person_ES5('John', 1990, 'teacher');
+
+//ES6
+class Person_ES6 {
+    constructor(name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+
+    calculateAge() {
+        var age = new Date().getFullYear - this.yearOfBirth;
+        console.log(age);
+    }
+
+    static greeting() {
+        console.log('Hey there!');
+    }
+}
+
+const john_ES6 = new Person_ES6('John', 1990, 'teacher');
+
+Person_ES6.greeting();
+
+*/

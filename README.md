@@ -115,7 +115,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Rest Parameters
     - [x] Default Parameters
     - [x] Maps
-    - [ ] Classes
+    - [x] Classes
     - [ ] Classes with Subclasses
     - [ ] Coding Challenge 8
     - [ ] Coding Challenge 8: Solution
