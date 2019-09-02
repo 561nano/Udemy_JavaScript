@@ -137,7 +137,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Note: Tooling Changes
     - [x] A Modern Setup: Configuring Webpack
     - [x] A Modern Setup: The Webpack Dev Server
-    - [ ] A Modern Setup: Babel
+    - [x] A Modern Setup: Babel
     - [ ] Planning our Project Architecture with MVC
     - [ ] How ES6 Modules Work
     - [ ] Making our First API Calls
