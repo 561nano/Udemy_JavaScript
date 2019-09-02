@@ -135,7 +135,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] A Brief Introduction to the Command Line
     - [x] A Modern Setup: Installing Node.js and NPM
     - [x] Note: Tooling Changes
-    - [ ] A Modern Setup: Configuring Webpack
+    - [x] A Modern Setup: Configuring Webpack
     - [ ] A Modern Setup: The Webpack Dev Server
     - [ ] A Modern Setup: Babel
     - [ ] Planning our Project Architecture with MVC
