@@ -129,11 +129,11 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Making AJAX Calls with Fetch and Promises
     - [x] Making AJAX Calls with Fetch and Async/Await
 - [ ] Section 09: Modern JavaScript: Using ES6, NPM, Babel and Webpack
-    - [ ] Section Intro
-    - [ ] Project Overview
-    - [ ] An Overview of Modern JavaScript
-    - [ ] A Brief Introduction to the Command Line
-    - [ ] A Modern Setup: Installing Node.js and NPM
+    - [x] Section Intro
+    - [x] Project Overview
+    - [x] An Overview of Modern JavaScript
+    - [x] A Brief Introduction to the Command Line
+    - [x] A Modern Setup: Installing Node.js and NPM
     - [ ] Note: Tooling Changes
     - [ ] A Modern Setup: Configuring Webpack
     - [ ] A Modern Setup: The Webpack Dev Server
