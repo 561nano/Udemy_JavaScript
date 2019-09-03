@@ -141,7 +141,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Planning our Project Architecture with MVC
     - [x] How ES6 Modules Work
     - [x] Making our First API Calls
-    - [ ] Building the Search Model
+    - [x] Building the Search Model
     - [ ] Building the Search Controller
     - [ ] Building the Search View - Part 1 & 2
     - [ ] Rendering an AJAX Loading Spinner
