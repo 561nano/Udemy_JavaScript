@@ -1,6 +1,16 @@
-import str from './models/Search'; //method 1 to import
-//import {add as a, multiply as b, ID} from "./views/searchView"; //method 2 to import
-import * as searchView from "./views/searchView"; //method 3 to import
+import axios from 'axios';
 
-console.log(`Using imported functions! ${searchView.add(searchView.ID,2)} and ${searchView.multiply(3,5)} from searchView.js. ${str}`);
+async function getResults(query) {
+    const proxy = ''; // https://cors-anywhere.herokuapp.com/  if Access-Control-Allow-Origin is error
+    const key = '11e0fd5df169ec583ec0d0e154028006';
+    try {
+        const res = await axios(`${proxy}https://www.food2fork.com/api/search?key=${key}&q=${query}`);
+        const recipes = res.data.recipes;
+        console.log(recipes);
+    } catch (error) {
+        alert(error);
+    }
+}
+
+getResults('chicken');
 
