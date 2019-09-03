@@ -140,7 +140,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] A Modern Setup: Babel
     - [x] Planning our Project Architecture with MVC
     - [x] How ES6 Modules Work
-    - [ ] Making our First API Calls
+    - [x] Making our First API Calls
     - [ ] Building the Search Model
     - [ ] Building the Search Controller
     - [ ] Building the Search View - Part 1 & 2
