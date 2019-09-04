@@ -143,7 +143,8 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Making our First API Calls
     - [x] Building the Search Model
     - [x] Building the Search Controller
-    - [ ] Building the Search View - Part 1 & 2
+    - [x] Building the Search View - Part 1
+    - [ ] Building the Search View - Part 2
     - [ ] Rendering an AJAX Loading Spinner
     - [ ] Implementing Search Results Pagination
     - [ ] Building the Recipe Model - Part 1
