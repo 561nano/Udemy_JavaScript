@@ -8,7 +8,7 @@ export const clearInput = () => {
 
 export const clearResults = () => {
     elements.searchResultList.innerHTML = '';
-    elements.searchResultPages.innerHTML ='';
+    elements.searchResultPages.innerHTML = '';
 };
 
 const limitRecipeTitle = (title, limit = 17) => {
