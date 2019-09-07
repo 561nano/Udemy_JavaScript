@@ -147,7 +147,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Building the Search View - Part 2
     - [x] Rendering an AJAX Loading Spinner
     - [x] Implementing Search Results Pagination
-    - [ ] Building the Recipe Model - Part 1
+    - [x] Building the Recipe Model - Part 1
     - [ ] Building the Recipe Controller
     - [ ] Building the Recipe Model - Part 2
     - [ ] Building the Recipe View - Part 1
