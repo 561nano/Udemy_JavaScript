@@ -16,7 +16,7 @@ export default class Recipe {
             this.ingredients = result.data.recipe.ingredients;
         } catch (error) {
             console.log(error);
-            alert('😮 Something went Wrong 😮')
+            alert(`😮 Something went Wrong 😮\n${error}`);
         }
     }
     calcTime() {

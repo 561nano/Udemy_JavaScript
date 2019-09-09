@@ -37,6 +37,7 @@ const controlSearch = async () => {
             searchView.renderResults(state.search.result);
         } catch (error) {
             alert(`💔 Something wrong with the search💔\n ${error}`);
+            console.log(`💔 Something wrong with the search💔\n ${error}`);
             clearLoader();
         }
 
@@ -81,7 +82,8 @@ const controlRecipe = async () => {
             // Render recipe
             console.log(state.recipe);
         } catch (error) {
-            alert(`🔴 Error 🔴 processing recipe!\n no 🍕🍕🍕 for you!\n ${error}`)
+            alert(`🔴 Error 🔴 processing recipe!\n no 🍕🍕🍕 for you!\n ${error}`);
+            console.log(`🔴 Error 🔴 processing recipe!\n no 🍕🍕🍕 for you!\n ${error}`);
 
         }
     }
