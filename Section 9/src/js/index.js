@@ -36,8 +36,8 @@ const controlSearch = async () => {
             clearLoader();
             searchView.renderResults(state.search.result);
         } catch (error) {
-            alert(`💔 Something wrong with the search💔\n ${error}`);
-            console.log(`💔 Something wrong with the search💔\n ${error}`);
+            alert(`💔 Something wrong with the search💔\n ${error}\n🙏Thank You food2fork🙏`);
+            console.log(`💔 Something wrong with the search💔\n ${error}\n🙏Thank You food2fork🙏`);
             clearLoader();
         }
 
@@ -72,10 +72,10 @@ const controlRecipe = async () => {
 
         // Create new recipe object
         state.recipe = new Recipe(id);
-
         try {
-            // Get recipe data
+            // Get recipe data and parse ingredients
             await state.recipe.getRecipes();
+            state.recipe.parseIngredients();
             // Calculate serving and time
             state.recipe.calcTime();
             state.recipe.calcServing();
