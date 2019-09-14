@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {key, proxy} from '../config';
+import {key, proxy, APICounter} from '../config';
 
 export default class Recipe {
     constructor(id) {
@@ -14,6 +14,7 @@ export default class Recipe {
             this.img = result.data.recipe.image_url;
             this.url = result.data.recipe.source_url;
             this.ingredients = result.data.recipe.ingredients;
+            APICounter();
         } catch (error) {
             console.log(error);
             alert(`😮 Something went Wrong 😮\n${error}`);
