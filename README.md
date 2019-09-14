@@ -150,7 +150,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Building the Recipe Model - Part 1
     - [x] Building the Recipe Controller
     - [x] Building the Recipe Model - Part 2
-    - [ ] Building the Recipe View - Part 1
+    - [x] Building the Recipe View - Part 1
     - [ ] Building the Recipe View - Part 2
     - [ ] Updating Recipe Servings
     - [ ] Building the Shopping List Model
