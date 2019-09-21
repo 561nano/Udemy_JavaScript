@@ -152,7 +152,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Building the Recipe Model - Part 2
     - [x] Building the Recipe View - Part 1
     - [x] Building the Recipe View - Part 2
-    - [ ] Updating Recipe Servings
+    - [x] Updating Recipe Servings
     - [ ] Building the Shopping List Model
     - [ ] Building the Shopping List View
     - [ ] Building the Shopping List Controller
@@ -172,7 +172,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
 
 ## Authors
 
-* **Christian Serrano** - *Notes and Comments* - [GitHub Repository](https://github.com/561nano/Udemy_JavaScript)
+* **Christian Serrano** - *Notes Comments and Code* - [GitHub Repository](https://github.com/561nano/Udemy_JavaScript)
 
 ## Source
 * [The Complete JavaScript Course 2019: Build Real Projects!](https://www.udemy.com/the-complete-javascript-course/)
