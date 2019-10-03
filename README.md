@@ -154,7 +154,7 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [x] Building the Recipe View - Part 2
     - [x] Updating Recipe Servings
     - [x] Building the Shopping List Model
-    - [ ] Building the Shopping List View
+    - [x] Building the Shopping List View
     - [ ] Building the Shopping List Controller
     - [ ] Building the Likes Model
     - [ ] Building the Likes Controller
