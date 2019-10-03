@@ -161,10 +161,10 @@ This repository follow [The Complete JavaScript Course](https://www.udemy.com/th
     - [ ] Building the Likes View
     - [ ] Implementing Persistent Data with localStorage
     - [ ] Wrapping up: Final Considerations
-- [ ] Final Course Exam: 30 Questions to Test Your JavaScript Knowledge
-    - [ ] 30 Questions to Test Your JavaScript Knowledge
-- [ ] Conclusion
-    - [ ] Where to Go from Here
+- [x] Final Course Exam: 30 Questions to Test Your JavaScript Knowledge
+    - [x] 30 Questions to Test Your JavaScript Knowledge
+- [x] Conclusion
+    - [x] Where to Go from Here
 - [ ] A Node.js Crash Course (BONUS)
     - [ ] A Quick Overview of Node.js
     - [ ] The Laptop Store Project, Part 1 & 2
